@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 995438498, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 6
+  lastUpdatedAtString: 2021-11-02T23:20:48.503-03:00
+  initializedAtString: 2021-11-02T19:25:05.400-03:00
+  entries:
+  - path: GameOff\Assets\Scenes\SampleScene.unity
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Scenes\SampleScene.unity
+    projectPath: Assets\Scenes\SampleScene.unity
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: GameOff\Library\SceneVisibilityState.asset
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\SceneVisibilityState.asset
+    projectPath: Library\SceneVisibilityState.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: GameOff\Library\ShaderCache\EditorEncounteredVariants
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\ShaderCache\EditorEncounteredVariants
+    projectPath: Library\ShaderCache\EditorEncounteredVariants
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: GameOff\ProjectSettings\TagManager.asset
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\ProjectSettings\TagManager.asset
+    projectPath: ProjectSettings\TagManager.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
