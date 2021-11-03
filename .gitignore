@@ -2,8 +2,8 @@
 /*/
 
 !.gitignore
-!/Assets/
-!/ProjectSettings/
+!/Assets/**
+!/ProjectSettings/**
 
 # Windows thumbnail cache files
 Thumbs.db
