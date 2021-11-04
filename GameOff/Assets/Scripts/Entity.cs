@@ -30,11 +30,15 @@ public class Entity : MonoBehaviour
         stateMachine.Update();
     }
 
-     void OnDrawGizmosSelected()
-     {
-         
+    void OnDrawGizmosSelected()
+    {
         UnityEditor.Handles.color = Color.green;
-        UnityEditor.Handles.DrawWireDisc(transform.position , transform.up, DistanceToAttack);
-         
-     }
+        UnityEditor.Handles.DrawWireDisc(transform.position, transform.up, DistanceToAttack);
+    }
+
+    void OnDrawGizmos()
+    {
+        if (stateMachine != null)
+            UnityEditor.Handles.Label(transform.position + transform.up, stateMachine.currentState.ToString());
+    }
 }

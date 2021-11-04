@@ -19,7 +19,6 @@ public class TowerIdleState: State
     public override void OnStay()
     {
         _targets = GameObject.FindObjectsOfType<Enemy>();
-        Debug.Log(_targets.Length);
         foreach(var target in _targets) {
             if (Vector3.Distance(owner.transform.position, target.transform.position) < owner.DistanceToAttack)
             {

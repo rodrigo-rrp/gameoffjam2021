@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float Damage;
+    public float Speed;
+    public Enemy Target;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.LookAt(Target.transform);
+        GetComponent<Rigidbody>().velocity = transform.forward * Speed;
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(transform.position, transform.forward * 5);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collision: " + collision.gameObject);
+        if (collision.gameObject.tag == "Enemies")
+        {
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(Damage);
+        }
+        Destroy(gameObject);
     }
 }

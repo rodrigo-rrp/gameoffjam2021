@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2021-11-02T23:16:19.228-03:00
-  initializedAtString: 2021-11-02T19:25:05.097-03:00
+  lastUpdatedAtString: 2021-11-03T22:22:12.007-03:00
+  initializedAtString: 2021-11-03T17:17:31.188-03:00
   currentGitRemote:
     name: origin
     url: https://github.com/rodrigo-rrp/gameoffjam2021.git

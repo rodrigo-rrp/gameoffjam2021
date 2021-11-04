@@ -6,6 +6,7 @@ public class Tower : Entity
 {
     public GameObject Bullet;
     public Enemy Target;
+    public float BulletSpeed;
 
      public override void Awake() {
         stateMachine = new StateMachine();
