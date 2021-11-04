@@ -10,17 +10,14 @@ public class AntDeadState: State
 
     public override void OnEnter()
     {
-        Debug.Log("Entering Dead State");
         GameObject.Destroy(owner.gameObject);
     }
 
     public override void OnStay()
     {
-        Debug.Log("Entering Dead State");
     }
 
     public override void OnExit()
     {
-        Debug.Log("Entering Dead State");
     }
 }

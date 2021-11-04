@@ -5,9 +5,6 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     public float Damage;
-    public float Health;
-    public float Armor;
-    public float Speed;
     public float DistanceToAttack;
     public float AttackCooldown;
     public float AttackSpeed;
@@ -38,7 +35,7 @@ public class Entity : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        if (stateMachine != null)
+        if (stateMachine != null && stateMachine.currentState != null)
             UnityEditor.Handles.Label(transform.position + transform.up, stateMachine.currentState.ToString());
     }
 }

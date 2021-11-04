@@ -10,6 +10,8 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
+        if (Target == null)
+            return;
         transform.LookAt(Target.transform);
         GetComponent<Rigidbody>().velocity = transform.forward * Speed;
     }
@@ -22,7 +24,6 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collision: " + collision.gameObject);
         if (collision.gameObject.tag == "Enemies")
         {
             collision.gameObject.GetComponent<Enemy>().TakeDamage(Damage);

@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
+    public float Health;
+    [Range(0, 10)]
+    public float Armor;
+    public float Speed;
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
@@ -13,7 +17,7 @@ public class Enemy : Entity
 
     public void TakeDamage(float damage)
     {
-        Health -= damage;
+        Health -= damage * (Armor > 0 ? (Armor / 10) : 1);
         if (Health <= 0)
         {
             State deadState = stateMachine.states.First(x => x.GetType().ToString().Contains("Dead"));
