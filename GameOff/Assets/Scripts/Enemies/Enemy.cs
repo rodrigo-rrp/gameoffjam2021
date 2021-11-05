@@ -9,6 +9,7 @@ public class Enemy : Entity
     [Range(0, 10)]
     public float Armor;
     public float Speed;
+    public int Reward;
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
@@ -22,6 +23,8 @@ public class Enemy : Entity
         {
             State deadState = stateMachine.states.First(x => x.GetType().ToString().Contains("Dead"));
             stateMachine.ChangeState(deadState.GetType());
+            GameManager.instance.AddCurrency(Reward);
+            GameManager.instance.AddEnemyKill();
         }
     }
 }
