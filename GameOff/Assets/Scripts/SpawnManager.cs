@@ -2,15 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 [Serializable]
 public struct WaveEnemy
 {
     public GameObject enemy;
     public int count;
-    // public float delay;
-    public Transform spawnPoint;
+    public Vector3 spawnPoint;
     public int reward;
+    public float delay;
+
+    public void InvokeSpawn(Vector3 spawnPoint, float delay, MonoBehaviour mono)
+    {
+        this.spawnPoint = spawnPoint;
+
+        // mono.Invoke("Spawn", delay);
+        IEnumerator coroutine = WaitAndSpawn(delay);
+        mono.StartCoroutine(coroutine);
+    }
+
+    public void Spawn()
+    {
+        // Debug.Log("spawning enemy");
+        GameObject go = GameObject.Instantiate(enemy, spawnPoint, Quaternion.identity);
+        go.GetComponent<Enemy>().Reward = reward;
+    }
+
+    IEnumerator WaitAndSpawn(float delay)
+    {
+        //while (true)
+        //{
+        yield return new WaitForSeconds(delay);
+        Spawn();
+        //}
+    }
 }
 [Serializable]
 public class Wave
@@ -18,19 +44,33 @@ public class Wave
     public WaveEnemy[] enemies;
     public float delay;
     public bool hasBeenSent = false;
+
+    public void Spawn(GameObject[] _spawnPoints, MonoBehaviour mono)
+    {
+        foreach (WaveEnemy we in enemies)
+        {
+            for (int i = 0; i < we.count; i++)
+            {
+                Vector3 spawnPoint = _spawnPoints[UnityEngine.Random.Range(0, _spawnPoints.Length)].transform.position;
+                Debug.Log("spawning enemy " + i + " in " + spawnPoint);
+                we.InvokeSpawn(spawnPoint, i * we.delay, mono);
+            }
+        }
+    }
 }
 
 public class SpawnManager : MonoBehaviour
 {
     public Wave[] waves;
     public float currentTime;
-    public int currentWave = -1;
+    public int currentWave = 0;
     private GameObject[] _spawnPoints;
+    public bool isPlaying = false;
+    public int enemiesLeft = 0;
 
     void Awake()
     {
-        currentTime = 0;
-        _spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoints");
+        _spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
     }
 
     void Update()
@@ -42,33 +82,25 @@ public class SpawnManager : MonoBehaviour
 
         if (!waves[currentWave].hasBeenSent && currentTime >= waves[currentWave].delay)
         {
-            SpawnWave();
-            currentTime = 0;
+            waves[currentWave].Spawn(_spawnPoints, this);
+            waves[currentWave].hasBeenSent = true;
         }
     }
 
     public void LoadNextWave()
     {
-        currentWave++;
-        if (currentWave >= waves.Length)
+        currentWave++; 
+        if (currentWave >= waves.Length) {
             GameManager.instance.Win();
-    }
-
-    void SpawnWave()
-    {
-        waves[currentWave].hasBeenSent = true;
-        foreach (WaveEnemy wave in waves[currentWave].enemies)
-        {
-            for (int i = 0; i < wave.count; i++)
-            {
-                for (int j = 0; j < 0; j++)
-                {
-                    Vector3 spawnPoint = wave.spawnPoint == null ? _spawnPoints[UnityEngine.Random.Range(0, _spawnPoints.Length)].transform.position : wave.spawnPoint.position;
-                    GameObject go = Instantiate(wave.enemy, spawnPoint, Quaternion.identity);
-                    go.GetComponent<Enemy>().Reward = wave.reward;
-                }
-            }
+            currentWave = -1;
+            return;
         }
+        isPlaying = true;
+        currentTime = 0;
+        enemiesLeft = waves[currentWave].enemies.ToList().Sum(x => x.count);
+        Debug.Log("LOAD WAVE");
+        Debug.Log("Enemies left: " + enemiesLeft);
+       
     }
 
 }

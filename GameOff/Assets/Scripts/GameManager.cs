@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public int EnemiesKilled = 0;
     private SpawnManager _spawnManager;
 
+    public bool GameIsOver = false;
+
     void Awake()
     {
         if (instance == null)
@@ -43,8 +45,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemies.Length == 0)
+        if (GameIsOver) return;
+
+        if (_spawnManager.waves[_spawnManager.currentWave].hasBeenSent && _spawnManager.enemiesLeft == 0)
         {
             _spawnManager.LoadNextWave();
         }
@@ -53,6 +56,7 @@ public class GameManager : MonoBehaviour
     public void AddEnemyKill()
     {
         EnemiesKilled++;
+        _spawnManager.enemiesLeft--;
     }
 
     public void AddCurrency(int amount)
@@ -65,6 +69,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("You Win");
         Time.timeScale = 0;
+        GameIsOver = true;
     }
 
 

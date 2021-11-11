@@ -6,10 +6,12 @@ public class TowerAttackState : State
 {
     private float _lastAttackTime;
     private Tower _tower;
+    private Vector3 _cannonPosition;
 
     public TowerAttackState(Tower tower, StateMachine sm) : base(tower, sm)
     {
         _tower = tower;
+        _cannonPosition = _tower.transform.Find("Cannon").position;
         _lastAttackTime = Time.time;
     }
 
@@ -21,7 +23,7 @@ public class TowerAttackState : State
     {
         if (Time.time - _lastAttackTime > _tower.AttackCooldown)
         {
-            GameObject _bullet = GameObject.Instantiate(_tower.Bullet, _tower.transform.position, Quaternion.identity);
+            GameObject _bullet = GameObject.Instantiate(_tower.Bullet, _cannonPosition, Quaternion.identity);
 
             Bullet bullet = _bullet.GetComponent<Bullet>();
             bullet.Damage = _tower.Damage;
@@ -31,8 +33,9 @@ public class TowerAttackState : State
             _lastAttackTime = Time.time;
         }
 
-        if (_tower.Target.Health <= 0) 
+        if (_tower.Target == null || _tower.Target.Health <= 0) 
         {
+            Debug.Log("cambia de target " + _tower.Target);
             stateMachine.ChangeState(typeof(TowerIdleState));
         }
     }

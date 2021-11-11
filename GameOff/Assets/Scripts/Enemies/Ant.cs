@@ -13,4 +13,6 @@ public class Ant : Enemy
         stateMachine.AddState(new AntDeadState(this, stateMachine));
         base.Awake();
     }
+
+    
 }
