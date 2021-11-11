@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : Entity
 {
@@ -10,6 +11,14 @@ public class Enemy : Entity
     public float Armor;
     public float Speed;
     public int Reward;
+    public NavMeshAgent agent;
+
+    public override void Awake()
+    {
+        base.Awake();
+        agent = GetComponent<NavMeshAgent>();
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;

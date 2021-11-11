@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 377052515288947355}
   - component: {fileID: 377052515288947352}
   - component: {fileID: 377052515288947348}
+  - component: {fileID: 5594282932372196955}
   m_Layer: 0
   m_Name: BuildSlot
   m_TagString: Untagged
@@ -110,3 +111,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BuildableObjects:
   - {fileID: 4599212576971650290, guid: fa64e8354fddac84ca27fb1eaee9a815, type: 3}
+--- !u!208 &5594282932372196955
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377052515288947353}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2021-11-11T16:01:49.239-03:00
-  initializedAtString: 2021-11-11T15:30:23.363-03:00
+  lastUpdatedAtString: 2021-11-11T20:02:53.668-03:00
+  initializedAtString: 2021-11-11T16:34:37.158-03:00
   entries:
   - path: GameOff\Assets\Prefabs\Ant.prefab
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Prefabs\Ant.prefab
@@ -22,33 +22,39 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: GameOff\Assets\Prefabs\Bullet.prefab
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Prefabs\Bullet.prefab
-    projectPath: Assets\Prefabs\Bullet.prefab
+  - path: GameOff\Assets\Prefabs\BuildSlot.prefab
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Prefabs\BuildSlot.prefab
+    projectPath: Assets\Prefabs\BuildSlot.prefab
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: GameOff\Assets\Prefabs\TowerParent.prefab
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Prefabs\TowerParent.prefab
-    projectPath: Assets\Prefabs\TowerParent.prefab
+  - path: GameOff\Assets\Scenes\SampleScene.meta
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Scenes\SampleScene.meta
+    projectPath: Assets\Scenes\SampleScene.meta
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
   - path: GameOff\Assets\Scenes\SampleScene.unity
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Scenes\SampleScene.unity
     projectPath: Assets\Scenes\SampleScene.unity
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: GameOff\Assets\Scripts\Bullet.cs
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Scripts\Bullet.cs
-    projectPath: Assets\Scripts\Bullet.cs
+  - path: GameOff\Assets\Scenes\SampleScene\NavMesh.asset
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Scenes\SampleScene\NavMesh.asset
+    projectPath: Assets\Scenes\SampleScene\NavMesh.asset
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GameOff\Assets\Scripts\Enemies\Ant.cs
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Scripts\Enemies\Ant.cs
-    projectPath: Assets\Scripts\Enemies\Ant.cs
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GameOff\Assets\Scenes\SampleScene\NavMesh.asset.meta
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Scenes\SampleScene\NavMesh.asset.meta
+    projectPath: Assets\Scenes\SampleScene\NavMesh.asset.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GameOff\Assets\Scripts\Enemies\AntStateMachine\AntMoveState.cs
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Scripts\Enemies\AntStateMachine\AntMoveState.cs
+    projectPath: Assets\Scripts\Enemies\AntStateMachine\AntMoveState.cs
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -58,117 +64,39 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: GameOff\Assets\Scripts\GameManager.cs
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Scripts\GameManager.cs
-    projectPath: Assets\Scripts\GameManager.cs
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GameOff\Assets\Scripts\SpawnManager.cs
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Scripts\SpawnManager.cs
-    projectPath: Assets\Scripts\SpawnManager.cs
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GameOff\Assets\Scripts\Towers\TowerStateMachine\TowerAttackState.cs
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Scripts\Towers\TowerStateMachine\TowerAttackState.cs
-    projectPath: Assets\Scripts\Towers\TowerStateMachine\TowerAttackState.cs
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GameOff\Assets\Scripts\UIManager.cs
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Assets\Scripts\UIManager.cs
-    projectPath: Assets\Scripts\UIManager.cs
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: GameOff\Library\ArtifactDB
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\ArtifactDB
     projectPath: Library\ArtifactDB
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: GameOff\Library\Artifacts\02\02f7de89c9d840a202d701ad3852b865
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\02\02f7de89c9d840a202d701ad3852b865
-    projectPath: Library\Artifacts\02\02f7de89c9d840a202d701ad3852b865
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\05\05c4c8565d0ebc620eb91ca8b93befd1
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\05\05c4c8565d0ebc620eb91ca8b93befd1
-    projectPath: Library\Artifacts\05\05c4c8565d0ebc620eb91ca8b93befd1
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\0b\0b4532c7aca3198520830bde49008018
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\0b\0b4532c7aca3198520830bde49008018
-    projectPath: Library\Artifacts\0b\0b4532c7aca3198520830bde49008018
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\0d\0df3950eb762bb2f5b9e58eb76fc6afc
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\0d\0df3950eb762bb2f5b9e58eb76fc6afc
-    projectPath: Library\Artifacts\0d\0df3950eb762bb2f5b9e58eb76fc6afc
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: GameOff\Library\Artifacts\17\1732151bfd60a30803d0cfc8958e5894
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\17\1732151bfd60a30803d0cfc8958e5894
     projectPath: Library\Artifacts\17\1732151bfd60a30803d0cfc8958e5894
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GameOff\Library\Artifacts\23\23ecce23b538603df24f7a233b80149d
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\23\23ecce23b538603df24f7a233b80149d
+    projectPath: Library\Artifacts\23\23ecce23b538603df24f7a233b80149d
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\19\19a7f758ae05ccec5e189d90e2830822
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\19\19a7f758ae05ccec5e189d90e2830822
-    projectPath: Library\Artifacts\19\19a7f758ae05ccec5e189d90e2830822
+  - path: GameOff\Library\Artifacts\26\267e74b0b299b8baee365782877c494b
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\26\267e74b0b299b8baee365782877c494b
+    projectPath: Library\Artifacts\26\267e74b0b299b8baee365782877c494b
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\20\202f715f0d67e0d2069a09e0580235de
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\20\202f715f0d67e0d2069a09e0580235de
-    projectPath: Library\Artifacts\20\202f715f0d67e0d2069a09e0580235de
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GameOff\Library\Artifacts\2c\2c66bb3f747092ca8979387432a267bd
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\2c\2c66bb3f747092ca8979387432a267bd
+    projectPath: Library\Artifacts\2c\2c66bb3f747092ca8979387432a267bd
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\21\2178a8a0fa8308fcfa83c6c3cf779a0c
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\21\2178a8a0fa8308fcfa83c6c3cf779a0c
-    projectPath: Library\Artifacts\21\2178a8a0fa8308fcfa83c6c3cf779a0c
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\22\22202386d943f2b07872935f587b39a5
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\22\22202386d943f2b07872935f587b39a5
-    projectPath: Library\Artifacts\22\22202386d943f2b07872935f587b39a5
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\26\262840c034cff781daa87336605e76ab
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\26\262840c034cff781daa87336605e76ab
-    projectPath: Library\Artifacts\26\262840c034cff781daa87336605e76ab
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\28\28db4c47b8cccba17689899722525328
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\28\28db4c47b8cccba17689899722525328
-    projectPath: Library\Artifacts\28\28db4c47b8cccba17689899722525328
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\29\29716df053e07c1cfd0b120ac25d50af
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\29\29716df053e07c1cfd0b120ac25d50af
-    projectPath: Library\Artifacts\29\29716df053e07c1cfd0b120ac25d50af
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
+    indexStatus: 1
+    workTreeStatus: 1
   - path: GameOff\Library\Artifacts\2c\2cf02b42c7a1ac4e2b2a6f834e92e84b
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\2c\2cf02b42c7a1ac4e2b2a6f834e92e84b
     projectPath: Library\Artifacts\2c\2cf02b42c7a1ac4e2b2a6f834e92e84b
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\2c\2cf3f7e27994652d7fdbf9446844a114
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\2c\2cf3f7e27994652d7fdbf9446844a114
-    projectPath: Library\Artifacts\2c\2cf3f7e27994652d7fdbf9446844a114
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
@@ -176,11 +104,17 @@ MonoBehaviour:
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\31\31c1abcc755d0de371bb168a8943cb42
     projectPath: Library\Artifacts\31\31c1abcc755d0de371bb168a8943cb42
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: GameOff\Library\Artifacts\33\3377f1ad6fde9f770c00ffec8639f7f5
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\33\3377f1ad6fde9f770c00ffec8639f7f5
     projectPath: Library\Artifacts\33\3377f1ad6fde9f770c00ffec8639f7f5
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GameOff\Library\Artifacts\38\386b1d4b5a3357f3e9911dfc4f1d48f1
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\38\386b1d4b5a3357f3e9911dfc4f1d48f1
+    projectPath: Library\Artifacts\38\386b1d4b5a3357f3e9911dfc4f1d48f1
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -188,83 +122,35 @@ MonoBehaviour:
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\3a\3aa54bf1f74cd4fa5b4d3511ccfd0d6e
     projectPath: Library\Artifacts\3a\3aa54bf1f74cd4fa5b4d3511ccfd0d6e
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\3a\3ae9f9be2734178742c76a20d46b1663
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\3a\3ae9f9be2734178742c76a20d46b1663
-    projectPath: Library\Artifacts\3a\3ae9f9be2734178742c76a20d46b1663
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: GameOff\Library\Artifacts\3b\3b8afb50786142d9006bf74a244abd1a
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\3b\3b8afb50786142d9006bf74a244abd1a
     projectPath: Library\Artifacts\3b\3b8afb50786142d9006bf74a244abd1a
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GameOff\Library\Artifacts\44\44a5f07d3833de256c8ad2037b6426fb
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\44\44a5f07d3833de256c8ad2037b6426fb
+    projectPath: Library\Artifacts\44\44a5f07d3833de256c8ad2037b6426fb
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\3b\3b8cb8d340d01628d3c16c9afd83b610
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\3b\3b8cb8d340d01628d3c16c9afd83b610
-    projectPath: Library\Artifacts\3b\3b8cb8d340d01628d3c16c9afd83b610
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\3c\3c654c90d18c2de8210e4f473998f270
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\3c\3c654c90d18c2de8210e4f473998f270
-    projectPath: Library\Artifacts\3c\3c654c90d18c2de8210e4f473998f270
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
   - path: GameOff\Library\Artifacts\44\44c0a8a2ef742a26685b555acbfad34d
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\44\44c0a8a2ef742a26685b555acbfad34d
     projectPath: Library\Artifacts\44\44c0a8a2ef742a26685b555acbfad34d
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GameOff\Library\Artifacts\4d\4d891d4650fb7a87166e80b6f805e3b5
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\4d\4d891d4650fb7a87166e80b6f805e3b5
+    projectPath: Library\Artifacts\4d\4d891d4650fb7a87166e80b6f805e3b5
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\4c\4c57c6d089650cdf4cf49200adcd291a
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\4c\4c57c6d089650cdf4cf49200adcd291a
-    projectPath: Library\Artifacts\4c\4c57c6d089650cdf4cf49200adcd291a
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\4d\4da25d42c2004b3534647ec43f05d864
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\4d\4da25d42c2004b3534647ec43f05d864
-    projectPath: Library\Artifacts\4d\4da25d42c2004b3534647ec43f05d864
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
   - path: GameOff\Library\Artifacts\4e\4e16cd6ae54865bf3099638fb18796f6
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\4e\4e16cd6ae54865bf3099638fb18796f6
     projectPath: Library\Artifacts\4e\4e16cd6ae54865bf3099638fb18796f6
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\4e\4e85e03dbe923efd968209f7ac060d7b
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\4e\4e85e03dbe923efd968209f7ac060d7b
-    projectPath: Library\Artifacts\4e\4e85e03dbe923efd968209f7ac060d7b
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\4f\4fc4f9348722632a8c227ab99b4ff8a2
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\4f\4fc4f9348722632a8c227ab99b4ff8a2
-    projectPath: Library\Artifacts\4f\4fc4f9348722632a8c227ab99b4ff8a2
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\50\503110b0be0dbe6dd018dd2bf9c37958
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\50\503110b0be0dbe6dd018dd2bf9c37958
-    projectPath: Library\Artifacts\50\503110b0be0dbe6dd018dd2bf9c37958
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\58\580b5a541d3ab595155b28b243c1c209
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\58\580b5a541d3ab595155b28b243c1c209
-    projectPath: Library\Artifacts\58\580b5a541d3ab595155b28b243c1c209
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\58\58b1ad102767a0d42c9c0dc5137809c9
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\58\58b1ad102767a0d42c9c0dc5137809c9
-    projectPath: Library\Artifacts\58\58b1ad102767a0d42c9c0dc5137809c9
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
@@ -272,53 +158,23 @@ MonoBehaviour:
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\5a\5aa150717e38f30c2eb79e113a7e4d7a
     projectPath: Library\Artifacts\5a\5aa150717e38f30c2eb79e113a7e4d7a
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\5d\5daaf29a33664aa98461368c4c3220a3
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\5d\5daaf29a33664aa98461368c4c3220a3
-    projectPath: Library\Artifacts\5d\5daaf29a33664aa98461368c4c3220a3
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
   - path: GameOff\Library\Artifacts\5e\5e523eea18131d64ab4a6791841746b3
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\5e\5e523eea18131d64ab4a6791841746b3
     projectPath: Library\Artifacts\5e\5e523eea18131d64ab4a6791841746b3
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: GameOff\Library\Artifacts\62\6255a9d2124b149fd0c134f89002f483
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\62\6255a9d2124b149fd0c134f89002f483
     projectPath: Library\Artifacts\62\6255a9d2124b149fd0c134f89002f483
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\6b\6b022e3a09689c5441cb8370cd6b1e79
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\6b\6b022e3a09689c5441cb8370cd6b1e79
-    projectPath: Library\Artifacts\6b\6b022e3a09689c5441cb8370cd6b1e79
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\6b\6b3e9d960669e4697cfbbe704a41fa90
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\6b\6b3e9d960669e4697cfbbe704a41fa90
-    projectPath: Library\Artifacts\6b\6b3e9d960669e4697cfbbe704a41fa90
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\6e\6eb65bbd3b3039226bff4ba44d127541
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\6e\6eb65bbd3b3039226bff4ba44d127541
-    projectPath: Library\Artifacts\6e\6eb65bbd3b3039226bff4ba44d127541
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\6f\6fbf5ff9c02da86a9a5f872aa89f20dc
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\6f\6fbf5ff9c02da86a9a5f872aa89f20dc
-    projectPath: Library\Artifacts\6f\6fbf5ff9c02da86a9a5f872aa89f20dc
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\71\716fa980b2dbd60a8f92c7a6ee89f184
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\71\716fa980b2dbd60a8f92c7a6ee89f184
-    projectPath: Library\Artifacts\71\716fa980b2dbd60a8f92c7a6ee89f184
+  - path: GameOff\Library\Artifacts\67\679c63ea22f5b69bc2cca2d2a0909162
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\67\679c63ea22f5b69bc2cca2d2a0909162
+    projectPath: Library\Artifacts\67\679c63ea22f5b69bc2cca2d2a0909162
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -326,89 +182,41 @@ MonoBehaviour:
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\74\740d3c33e4750d4681d61d3414dc2bb3
     projectPath: Library\Artifacts\74\740d3c33e4750d4681d61d3414dc2bb3
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\76\7677534e6786aea13b916dbdc18e912d
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\76\7677534e6786aea13b916dbdc18e912d
-    projectPath: Library\Artifacts\76\7677534e6786aea13b916dbdc18e912d
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\76\7685fea0133bbfd160d97dcb6d1aa263
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\76\7685fea0133bbfd160d97dcb6d1aa263
-    projectPath: Library\Artifacts\76\7685fea0133bbfd160d97dcb6d1aa263
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
   - path: GameOff\Library\Artifacts\76\76baf658b09acc427186701beb5330d8
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\76\76baf658b09acc427186701beb5330d8
     projectPath: Library\Artifacts\76\76baf658b09acc427186701beb5330d8
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\77\77b73110ad08d14ca74d93b2d2399fdd
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\77\77b73110ad08d14ca74d93b2d2399fdd
-    projectPath: Library\Artifacts\77\77b73110ad08d14ca74d93b2d2399fdd
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\7e\7e7109f7736b5ca02e3c98b468d2c054
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\7e\7e7109f7736b5ca02e3c98b468d2c054
-    projectPath: Library\Artifacts\7e\7e7109f7736b5ca02e3c98b468d2c054
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: GameOff\Library\Artifacts\7f\7f81037d92973214ecc79d951ac7ea08
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\7f\7f81037d92973214ecc79d951ac7ea08
     projectPath: Library\Artifacts\7f\7f81037d92973214ecc79d951ac7ea08
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: GameOff\Library\Artifacts\82\8202a8878022aefab6c67fc5971461f0
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\82\8202a8878022aefab6c67fc5971461f0
     projectPath: Library\Artifacts\82\8202a8878022aefab6c67fc5971461f0
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GameOff\Library\Artifacts\8d\8d7bf192708be8429ce05de4f3ebad8d
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\8d\8d7bf192708be8429ce05de4f3ebad8d
+    projectPath: Library\Artifacts\8d\8d7bf192708be8429ce05de4f3ebad8d
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\86\863d6d676c25d8d69a3b15dab20e62e3
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\86\863d6d676c25d8d69a3b15dab20e62e3
-    projectPath: Library\Artifacts\86\863d6d676c25d8d69a3b15dab20e62e3
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\89\8937ec75d1855fbfbb3769d36191d87f
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\89\8937ec75d1855fbfbb3769d36191d87f
-    projectPath: Library\Artifacts\89\8937ec75d1855fbfbb3769d36191d87f
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\8b\8b60f92d34e6167f3639f52186e105e7
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\8b\8b60f92d34e6167f3639f52186e105e7
-    projectPath: Library\Artifacts\8b\8b60f92d34e6167f3639f52186e105e7
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\8b\8bba810377ca28243343ffb781d2e175
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\8b\8bba810377ca28243343ffb781d2e175
-    projectPath: Library\Artifacts\8b\8bba810377ca28243343ffb781d2e175
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
   - path: GameOff\Library\Artifacts\8e\8efaa0aac736f87ed783d7f1c83f9b7a
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\8e\8efaa0aac736f87ed783d7f1c83f9b7a
     projectPath: Library\Artifacts\8e\8efaa0aac736f87ed783d7f1c83f9b7a
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: GameOff\Library\Artifacts\8f\8f2992b396b7fd996bc831e90c7defc6
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\8f\8f2992b396b7fd996bc831e90c7defc6
     projectPath: Library\Artifacts\8f\8f2992b396b7fd996bc831e90c7defc6
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\8f\8fe66abb524bc66d3966969f8915d59e
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\8f\8fe66abb524bc66d3966969f8915d59e
-    projectPath: Library\Artifacts\8f\8fe66abb524bc66d3966969f8915d59e
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
@@ -416,41 +224,11 @@ MonoBehaviour:
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\9b\9bccb47d7a4d040b7652d45c254ff040
     projectPath: Library\Artifacts\9b\9bccb47d7a4d040b7652d45c254ff040
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\9c\9c3194b30af36c0fe5497a9da6d471e9
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\9c\9c3194b30af36c0fe5497a9da6d471e9
-    projectPath: Library\Artifacts\9c\9c3194b30af36c0fe5497a9da6d471e9
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\9d\9d3455f8d56e715e554222e7d6233375
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\9d\9d3455f8d56e715e554222e7d6233375
-    projectPath: Library\Artifacts\9d\9d3455f8d56e715e554222e7d6233375
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\9d\9d5d814a8c649ba75152ad57d31b09c2
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\9d\9d5d814a8c649ba75152ad57d31b09c2
-    projectPath: Library\Artifacts\9d\9d5d814a8c649ba75152ad57d31b09c2
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
   - path: GameOff\Library\Artifacts\9e\9efc6b39d523cbdc734a49a9930e3bdc
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\9e\9efc6b39d523cbdc734a49a9930e3bdc
     projectPath: Library\Artifacts\9e\9efc6b39d523cbdc734a49a9930e3bdc
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\a6\a666ccc3c4665fe046a9f54b9d6241c5
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\a6\a666ccc3c4665fe046a9f54b9d6241c5
-    projectPath: Library\Artifacts\a6\a666ccc3c4665fe046a9f54b9d6241c5
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\a8\a864257c04f94e820231db3c444096a9
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\a8\a864257c04f94e820231db3c444096a9
-    projectPath: Library\Artifacts\a8\a864257c04f94e820231db3c444096a9
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
@@ -458,119 +236,41 @@ MonoBehaviour:
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\a9\a91b34afc908c46b26d01811e58114ec
     projectPath: Library\Artifacts\a9\a91b34afc908c46b26d01811e58114ec
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\a9\a994275cfb2fa46af15a934ce0891dd6
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\a9\a994275cfb2fa46af15a934ce0891dd6
-    projectPath: Library\Artifacts\a9\a994275cfb2fa46af15a934ce0891dd6
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\a9\a9a4f226d868d60011d2a15c685f5803
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\a9\a9a4f226d868d60011d2a15c685f5803
-    projectPath: Library\Artifacts\a9\a9a4f226d868d60011d2a15c685f5803
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
   - path: GameOff\Library\Artifacts\aa\aa13a595271aa0c96205d0ad6e992264
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\aa\aa13a595271aa0c96205d0ad6e992264
     projectPath: Library\Artifacts\aa\aa13a595271aa0c96205d0ad6e992264
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\ad\ad1a52dfb9c604208a6ba46f5a2cb30a
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\ad\ad1a52dfb9c604208a6ba46f5a2cb30a
-    projectPath: Library\Artifacts\ad\ad1a52dfb9c604208a6ba46f5a2cb30a
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\b0\b0c12258636c130e9b0d4ecb40c1a072
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\b0\b0c12258636c130e9b0d4ecb40c1a072
-    projectPath: Library\Artifacts\b0\b0c12258636c130e9b0d4ecb40c1a072
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\b2\b2fd1d34a04738a397ac8d935474dc06
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\b2\b2fd1d34a04738a397ac8d935474dc06
-    projectPath: Library\Artifacts\b2\b2fd1d34a04738a397ac8d935474dc06
+  - path: GameOff\Library\Artifacts\b0\b0747e36a1a0eef2272ec34710e8467d
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\b0\b0747e36a1a0eef2272ec34710e8467d
+    projectPath: Library\Artifacts\b0\b0747e36a1a0eef2272ec34710e8467d
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\b3\b34b163dd6b6d7893e771d65f4cd7829
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\b3\b34b163dd6b6d7893e771d65f4cd7829
-    projectPath: Library\Artifacts\b3\b34b163dd6b6d7893e771d65f4cd7829
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\b4\b4be8e4248c80cb1a2b8bd8a9ec72825
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\b4\b4be8e4248c80cb1a2b8bd8a9ec72825
-    projectPath: Library\Artifacts\b4\b4be8e4248c80cb1a2b8bd8a9ec72825
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\b6\b635bf422ad0a532078ab539508a48e3
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\b6\b635bf422ad0a532078ab539508a48e3
-    projectPath: Library\Artifacts\b6\b635bf422ad0a532078ab539508a48e3
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\bd\bd14fafe048ffc02efbcf9e3667605be
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\bd\bd14fafe048ffc02efbcf9e3667605be
-    projectPath: Library\Artifacts\bd\bd14fafe048ffc02efbcf9e3667605be
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
   - path: GameOff\Library\Artifacts\be\bedf84632789c65729b26c52bde2902a
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\be\bedf84632789c65729b26c52bde2902a
     projectPath: Library\Artifacts\be\bedf84632789c65729b26c52bde2902a
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\c1\c1c7768a28a94b954cf5704ccab40e8b
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\c1\c1c7768a28a94b954cf5704ccab40e8b
-    projectPath: Library\Artifacts\c1\c1c7768a28a94b954cf5704ccab40e8b
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
+  - path: GameOff\Library\Artifacts\c1\c11c0e34b2631a46a937845d090b6297
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\c1\c11c0e34b2631a46a937845d090b6297
+    projectPath: Library\Artifacts\c1\c11c0e34b2631a46a937845d090b6297
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: GameOff\Library\Artifacts\c2\c2d4a5af43f2b7667e0014c9b6aca66c
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\c2\c2d4a5af43f2b7667e0014c9b6aca66c
     projectPath: Library\Artifacts\c2\c2d4a5af43f2b7667e0014c9b6aca66c
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\c7\c7b7cc9c648db7a2b503f096d1b9ece2
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\c7\c7b7cc9c648db7a2b503f096d1b9ece2
-    projectPath: Library\Artifacts\c7\c7b7cc9c648db7a2b503f096d1b9ece2
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\c8\c85f68d1e071b5b4cbca8779f522ad11
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\c8\c85f68d1e071b5b4cbca8779f522ad11
-    projectPath: Library\Artifacts\c8\c85f68d1e071b5b4cbca8779f522ad11
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\ca\ca21ff388778d4cb251274c9db230ac3
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\ca\ca21ff388778d4cb251274c9db230ac3
-    projectPath: Library\Artifacts\ca\ca21ff388778d4cb251274c9db230ac3
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\ca\ca31a99017b2a2ffeb36cffef49fa291
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\ca\ca31a99017b2a2ffeb36cffef49fa291
-    projectPath: Library\Artifacts\ca\ca31a99017b2a2ffeb36cffef49fa291
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\cd\cd7740cff161b34debcfb117789827d5
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\cd\cd7740cff161b34debcfb117789827d5
-    projectPath: Library\Artifacts\cd\cd7740cff161b34debcfb117789827d5
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\cf\cf6d4258991cfbd9a04f5c20668bd838
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\cf\cf6d4258991cfbd9a04f5c20668bd838
-    projectPath: Library\Artifacts\cf\cf6d4258991cfbd9a04f5c20668bd838
+  - path: GameOff\Library\Artifacts\d3\d35d63776e08b1b115e50e1351283d6a
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\d3\d35d63776e08b1b115e50e1351283d6a
+    projectPath: Library\Artifacts\d3\d35d63776e08b1b115e50e1351283d6a
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -578,17 +278,11 @@ MonoBehaviour:
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\da\da8340e539b441712cd9f9067c48db38
     projectPath: Library\Artifacts\da\da8340e539b441712cd9f9067c48db38
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: GameOff\Library\Artifacts\db\db13667490faa3b6fc90990ddcbae71c
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\db\db13667490faa3b6fc90990ddcbae71c
     projectPath: Library\Artifacts\db\db13667490faa3b6fc90990ddcbae71c
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\e1\e122b302dd52dc5b78f050e2bdfbc4ad
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\e1\e122b302dd52dc5b78f050e2bdfbc4ad
-    projectPath: Library\Artifacts\e1\e122b302dd52dc5b78f050e2bdfbc4ad
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
@@ -596,62 +290,38 @@ MonoBehaviour:
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\e2\e2be6af1347919b42df6ff8888b36d6b
     projectPath: Library\Artifacts\e2\e2be6af1347919b42df6ff8888b36d6b
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GameOff\Library\Artifacts\e2\e2f5390fe8d3bd0de91ed287c835cd53
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\e2\e2f5390fe8d3bd0de91ed287c835cd53
+    projectPath: Library\Artifacts\e2\e2f5390fe8d3bd0de91ed287c835cd53
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
   - path: GameOff\Library\Artifacts\e6\e6ab1afcec16daa7a2c28a2132eb2d73
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\e6\e6ab1afcec16daa7a2c28a2132eb2d73
     projectPath: Library\Artifacts\e6\e6ab1afcec16daa7a2c28a2132eb2d73
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: GameOff\Library\Artifacts\ee\eeb00b17e762ae00692d4f07affb50fa
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\ee\eeb00b17e762ae00692d4f07affb50fa
+    projectPath: Library\Artifacts\ee\eeb00b17e762ae00692d4f07affb50fa
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Library\Artifacts\e9\e9865bbec2bf2cdb1c155220e5089082
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\e9\e9865bbec2bf2cdb1c155220e5089082
-    projectPath: Library\Artifacts\e9\e9865bbec2bf2cdb1c155220e5089082
+  - path: GameOff\Library\Artifacts\f1\f1dcea90eb1835f27232f8e371d5d623
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\f1\f1dcea90eb1835f27232f8e371d5d623
+    projectPath: Library\Artifacts\f1\f1dcea90eb1835f27232f8e371d5d623
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\ee\ee1603dc144a621223ad984b838b1844
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\ee\ee1603dc144a621223ad984b838b1844
-    projectPath: Library\Artifacts\ee\ee1603dc144a621223ad984b838b1844
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\f1\f1fe6277503ad8fa550ad6f4fe3cf021
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\f1\f1fe6277503ad8fa550ad6f4fe3cf021
-    projectPath: Library\Artifacts\f1\f1fe6277503ad8fa550ad6f4fe3cf021
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\fc\fc5c942a4746ea2f2d33d675a4f86216
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\fc\fc5c942a4746ea2f2d33d675a4f86216
-    projectPath: Library\Artifacts\fc\fc5c942a4746ea2f2d33d675a4f86216
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\Artifacts\fc\fce8f15e2bf88cf07eaf742dc582398b
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\Artifacts\fc\fce8f15e2bf88cf07eaf742dc582398b
-    projectPath: Library\Artifacts\fc\fce8f15e2bf88cf07eaf742dc582398b
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: GameOff\Library\CurrentLayout-default.dwlt
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\CurrentLayout-default.dwlt
-    projectPath: Library\CurrentLayout-default.dwlt
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
   - path: GameOff\Library\EditorInstance.json
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\EditorInstance.json
     projectPath: Library\EditorInstance.json
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Library\expandedItems
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\expandedItems
-    projectPath: Library\expandedItems
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: GameOff\Library\gfu\cache\branches.yaml
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\gfu\cache\branches.yaml
     projectPath: Library\gfu\cache\branches.yaml
@@ -688,12 +358,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: GameOff\Library\InspectorExpandedItems.asset
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\InspectorExpandedItems.asset
-    projectPath: Library\InspectorExpandedItems.asset
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: GameOff\Library\SceneVisibilityState.asset
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\SceneVisibilityState.asset
     projectPath: Library\SceneVisibilityState.asset
@@ -703,12 +367,6 @@ MonoBehaviour:
   - path: GameOff\Library\ScriptAssemblies\Assembly-CSharp.dll
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\ScriptAssemblies\Assembly-CSharp.dll
     projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GameOff\Library\ShaderCache\EditorEncounteredVariants
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\ShaderCache\EditorEncounteredVariants
-    projectPath: Library\ShaderCache\EditorEncounteredVariants
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -724,15 +382,9 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: GameOff\Library\StateCache\PrefabStageHierarchy\97\9720f2b0bb41f7bc64d29e5bcb53e173.json
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\StateCache\PrefabStageHierarchy\97\9720f2b0bb41f7bc64d29e5bcb53e173.json
-    projectPath: Library\StateCache\PrefabStageHierarchy\97\9720f2b0bb41f7bc64d29e5bcb53e173.json
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: GameOff\Library\StateCache\SceneView\46\466045bc84bd558b2abe14422570764d.json
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\StateCache\SceneView\46\466045bc84bd558b2abe14422570764d.json
-    projectPath: Library\StateCache\SceneView\46\466045bc84bd558b2abe14422570764d.json
+  - path: GameOff\Library\StateCache\PrefabStageHierarchy\02\02162722571d7e4ee2eb5ffc8bed2f85.json
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Library\StateCache\PrefabStageHierarchy\02\02162722571d7e4ee2eb5ffc8bed2f85.json
+    projectPath: Library\StateCache\PrefabStageHierarchy\02\02162722571d7e4ee2eb5ffc8bed2f85.json
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -844,6 +496,36 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
+  - path: GameOff\Temp\ApiUpdater_CheckMovedFrom7427ecf4b97b8d047bf7df94c3121794
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\ApiUpdater_CheckMovedFrom7427ecf4b97b8d047bf7df94c3121794
+    projectPath: Temp\ApiUpdater_CheckMovedFrom7427ecf4b97b8d047bf7df94c3121794
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GameOff\Temp\ApiUpdater_CheckMovedFrom7968efe687fc92e47a47cf7e37839efa
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\ApiUpdater_CheckMovedFrom7968efe687fc92e47a47cf7e37839efa
+    projectPath: Temp\ApiUpdater_CheckMovedFrom7968efe687fc92e47a47cf7e37839efa
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GameOff\Temp\ApiUpdater_CheckMovedFromb14ca762e06d6094aaf96a27af19d896
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\ApiUpdater_CheckMovedFromb14ca762e06d6094aaf96a27af19d896
+    projectPath: Temp\ApiUpdater_CheckMovedFromb14ca762e06d6094aaf96a27af19d896
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GameOff\Temp\ApiUpdater_CheckMovedFrome5226deff2283bc47953ed400a21e095
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\ApiUpdater_CheckMovedFrome5226deff2283bc47953ed400a21e095
+    projectPath: Temp\ApiUpdater_CheckMovedFrome5226deff2283bc47953ed400a21e095
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: GameOff\Temp\ApiUpdater_CheckMovedFromfa43adda19063d042ba935411203a038
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\ApiUpdater_CheckMovedFromfa43adda19063d042ba935411203a038
+    projectPath: Temp\ApiUpdater_CheckMovedFromfa43adda19063d042ba935411203a038
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: GameOff\Temp\Assembly-CSharp.dll.hash
     fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\Assembly-CSharp.dll.hash
     projectPath: Temp\Assembly-CSharp.dll.hash
@@ -862,99 +544,75 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-03b97b2cb2d28ac4087fae1789dbd962
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-03b97b2cb2d28ac4087fae1789dbd962
-    projectPath: Temp\UnityTempFile-03b97b2cb2d28ac4087fae1789dbd962
+  - path: GameOff\Temp\UnityTempFile-00be3e0ddc3cf4342973a953791be7c2
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-00be3e0ddc3cf4342973a953791be7c2
+    projectPath: Temp\UnityTempFile-00be3e0ddc3cf4342973a953791be7c2
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-16bc67d42709a27429fa5d3339dc372f
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-16bc67d42709a27429fa5d3339dc372f
-    projectPath: Temp\UnityTempFile-16bc67d42709a27429fa5d3339dc372f
+  - path: GameOff\Temp\UnityTempFile-2073607c661eb7f42a05bd2ffc124a7a
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-2073607c661eb7f42a05bd2ffc124a7a
+    projectPath: Temp\UnityTempFile-2073607c661eb7f42a05bd2ffc124a7a
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-16cf7ae5990b8644f87f5038f0e06781
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-16cf7ae5990b8644f87f5038f0e06781
-    projectPath: Temp\UnityTempFile-16cf7ae5990b8644f87f5038f0e06781
+  - path: GameOff\Temp\UnityTempFile-2c987bbca60554749bd071d7dd812999
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-2c987bbca60554749bd071d7dd812999
+    projectPath: Temp\UnityTempFile-2c987bbca60554749bd071d7dd812999
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-1b5e46b9ea31a694aa629ad0f5603ac7
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-1b5e46b9ea31a694aa629ad0f5603ac7
-    projectPath: Temp\UnityTempFile-1b5e46b9ea31a694aa629ad0f5603ac7
+  - path: GameOff\Temp\UnityTempFile-39f2e499b770fde4db2db2a4fa6b4658
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-39f2e499b770fde4db2db2a4fa6b4658
+    projectPath: Temp\UnityTempFile-39f2e499b770fde4db2db2a4fa6b4658
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-320959cdf943707459f1ca15c15a07d7
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-320959cdf943707459f1ca15c15a07d7
-    projectPath: Temp\UnityTempFile-320959cdf943707459f1ca15c15a07d7
+  - path: GameOff\Temp\UnityTempFile-53b9c32d91113f140aca03180a299d44
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-53b9c32d91113f140aca03180a299d44
+    projectPath: Temp\UnityTempFile-53b9c32d91113f140aca03180a299d44
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-3352803241784bc4cb542549b11847c7
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-3352803241784bc4cb542549b11847c7
-    projectPath: Temp\UnityTempFile-3352803241784bc4cb542549b11847c7
+  - path: GameOff\Temp\UnityTempFile-5b6338b8426981e49bdf8d53a8e980ba
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-5b6338b8426981e49bdf8d53a8e980ba
+    projectPath: Temp\UnityTempFile-5b6338b8426981e49bdf8d53a8e980ba
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-534a44c3e2838744bb47d85f72d1a954
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-534a44c3e2838744bb47d85f72d1a954
-    projectPath: Temp\UnityTempFile-534a44c3e2838744bb47d85f72d1a954
+  - path: GameOff\Temp\UnityTempFile-6e58858701698fe4882ef46c53e5f079
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-6e58858701698fe4882ef46c53e5f079
+    projectPath: Temp\UnityTempFile-6e58858701698fe4882ef46c53e5f079
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-574210ec382f8b24ba565f5ee8048f74
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-574210ec382f8b24ba565f5ee8048f74
-    projectPath: Temp\UnityTempFile-574210ec382f8b24ba565f5ee8048f74
+  - path: GameOff\Temp\UnityTempFile-6f6d983399e22764a9725f0d0009a561
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-6f6d983399e22764a9725f0d0009a561
+    projectPath: Temp\UnityTempFile-6f6d983399e22764a9725f0d0009a561
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-5c4300880ffd4204b91f371c8ace438e
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-5c4300880ffd4204b91f371c8ace438e
-    projectPath: Temp\UnityTempFile-5c4300880ffd4204b91f371c8ace438e
+  - path: GameOff\Temp\UnityTempFile-a4673c77b0fc3b449aaea07dcc0bbec7
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-a4673c77b0fc3b449aaea07dcc0bbec7
+    projectPath: Temp\UnityTempFile-a4673c77b0fc3b449aaea07dcc0bbec7
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-923e4f59c1e662142a3fce2bf7a21939
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-923e4f59c1e662142a3fce2bf7a21939
-    projectPath: Temp\UnityTempFile-923e4f59c1e662142a3fce2bf7a21939
+  - path: GameOff\Temp\UnityTempFile-edabbd49767ffbe48b726235d0f547e9
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-edabbd49767ffbe48b726235d0f547e9
+    projectPath: Temp\UnityTempFile-edabbd49767ffbe48b726235d0f547e9
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-bb7eeb681e8c6954a87f1643e24779b0
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-bb7eeb681e8c6954a87f1643e24779b0
-    projectPath: Temp\UnityTempFile-bb7eeb681e8c6954a87f1643e24779b0
+  - path: GameOff\Temp\UnityTempFile-fd91d3171677721418f33e394d969026
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-fd91d3171677721418f33e394d969026
+    projectPath: Temp\UnityTempFile-fd91d3171677721418f33e394d969026
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-bb8caed2d93ebc947a08285ef98c8d32
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-bb8caed2d93ebc947a08285ef98c8d32
-    projectPath: Temp\UnityTempFile-bb8caed2d93ebc947a08285ef98c8d32
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-d838710e049754e43adc0dabcf8c9d85
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-d838710e049754e43adc0dabcf8c9d85
-    projectPath: Temp\UnityTempFile-d838710e049754e43adc0dabcf8c9d85
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-daca59f77124b1346b3a90fc159aaf60
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-daca59f77124b1346b3a90fc159aaf60
-    projectPath: Temp\UnityTempFile-daca59f77124b1346b3a90fc159aaf60
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-e2659d66b952b6142a5c8c922070e86c
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-e2659d66b952b6142a5c8c922070e86c
-    projectPath: Temp\UnityTempFile-e2659d66b952b6142a5c8c922070e86c
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: GameOff\Temp\UnityTempFile-f170bfb2e3fa8674381280bea17db8fb
-    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-f170bfb2e3fa8674381280bea17db8fb
-    projectPath: Temp\UnityTempFile-f170bfb2e3fa8674381280bea17db8fb
+  - path: GameOff\Temp\UnityTempFile-ffd8043d3a86cfb40b6df49de19039b4
+    fullPath: C:\Users\rodri\Documents\Development\gameoffjam2021\GameOff\Temp\UnityTempFile-ffd8043d3a86cfb40b6df49de19039b4
+    projectPath: Temp\UnityTempFile-ffd8043d3a86cfb40b6df49de19039b4
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1

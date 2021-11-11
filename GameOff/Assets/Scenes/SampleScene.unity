@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 00def5abde093be4c97f5a64e9f777ac, type: 2}
 --- !u!1001 &79957532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -943,6 +943,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 377052515288947349, guid: 84f67d66c2d815443bc7e607abc0dc51, type: 3}
   m_PrefabInstance: {fileID: 1802783493}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &810238571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 377052515288947353, guid: 84f67d66c2d815443bc7e607abc0dc51, type: 3}
+  m_PrefabInstance: {fileID: 377052513931885309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &810238572
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810238571}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &865348369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1532,7 +1553,7 @@ RectTransform:
   - {fileID: 1427925188}
   - {fileID: 1651008627}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1635,6 +1656,7 @@ GameObject:
   - component: {fileID: 1607115714}
   - component: {fileID: 1607115713}
   - component: {fileID: 1607115712}
+  - component: {fileID: 1607115716}
   m_Layer: 0
   m_Name: Target
   m_TagString: Target
@@ -1718,6 +1740,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &1607115716
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607115711}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1613197983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2051,6 +2089,7 @@ MonoBehaviour:
   Health: 1000
   Currency: 0
   EnemiesKilled: 0
+  GameIsOver: 0
 --- !u!114 &1688996670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2618,7 +2657,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2057640602
 PrefabInstance:
@@ -2759,6 +2798,7 @@ GameObject:
   - component: {fileID: 2130516548}
   - component: {fileID: 2130516547}
   - component: {fileID: 2130516546}
+  - component: {fileID: 2130516550}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -2842,6 +2882,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &2130516550
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130516545}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &377052513931885309
 PrefabInstance:
   m_ObjectHideFlags: 0
