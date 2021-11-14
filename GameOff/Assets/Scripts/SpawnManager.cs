@@ -17,25 +17,20 @@ public struct WaveEnemy
     {
         this.spawnPoint = spawnPoint;
 
-        // mono.Invoke("Spawn", delay);
         IEnumerator coroutine = WaitAndSpawn(delay);
         mono.StartCoroutine(coroutine);
     }
 
     public void Spawn()
     {
-        // Debug.Log("spawning enemy");
         GameObject go = GameObject.Instantiate(enemy, spawnPoint, Quaternion.identity);
         go.GetComponent<Enemy>().Reward = reward;
     }
 
     IEnumerator WaitAndSpawn(float delay)
     {
-        //while (true)
-        //{
         yield return new WaitForSeconds(delay);
         Spawn();
-        //}
     }
 }
 [Serializable]
@@ -52,7 +47,6 @@ public class Wave
             for (int i = 0; i < we.count; i++)
             {
                 Vector3 spawnPoint = _spawnPoints[UnityEngine.Random.Range(0, _spawnPoints.Length)].transform.position;
-                Debug.Log("spawning enemy " + i + " in " + spawnPoint);
                 we.InvokeSpawn(spawnPoint, i * we.delay, mono);
             }
         }
@@ -99,7 +93,6 @@ public class SpawnManager : MonoBehaviour
         currentTime = 0;
         enemiesLeft = waves[currentWave].enemies.ToList().Sum(x => x.count);
         Debug.Log("LOAD WAVE");
-        Debug.Log("Enemies left: " + enemiesLeft);
        
     }
 

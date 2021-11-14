@@ -865,6 +865,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildSlot (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 377052515288947353, guid: 84f67d66c2d815443bc7e607abc0dc51, type: 3}
+      propertyPath: m_TagString
+      value: BuildSlot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84f67d66c2d815443bc7e607abc0dc51, type: 3}
 --- !u!4 &734824606 stripped
@@ -2041,6 +2045,7 @@ GameObject:
   - component: {fileID: 1688996669}
   - component: {fileID: 1688996670}
   - component: {fileID: 1688996671}
+  - component: {fileID: 1688996672}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -2087,7 +2092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 1000
-  Currency: 0
+  Currency: 40
   EnemiesKilled: 0
   GameIsOver: 0
 --- !u!114 &1688996670
@@ -2135,6 +2140,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d747bc0ce3399c4883c4350429f98ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1688996672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688996666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ec328a3bfc05842b1ccf95461f3e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BuildableObjects:
+  - {fileID: 4599212576971650290, guid: fa64e8354fddac84ca27fb1eaee9a815, type: 3}
 --- !u!1 &1710932057
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5594282932372196955}
   m_Layer: 0
   m_Name: BuildSlot
-  m_TagString: Untagged
+  m_TagString: BuildSlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,8 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbab04400874ed48a065a90e39d97bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuildableObjects:
-  - {fileID: 4599212576971650290, guid: fa64e8354fddac84ca27fb1eaee9a815, type: 3}
+  Index: 0
 --- !u!208 &5594282932372196955
 NavMeshObstacle:
   m_ObjectHideFlags: 0

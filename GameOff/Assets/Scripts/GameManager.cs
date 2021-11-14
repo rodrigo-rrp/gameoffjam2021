@@ -26,6 +26,16 @@ public class GameManager : MonoBehaviour
         _spawnManager = GetComponent<SpawnManager>();
     }
 
+    public bool Buy(int cost)
+    {
+        if (Currency >= cost)
+        {
+            Currency -= cost;
+            return true;
+        }
+        return false;
+    }
+
     void Start()
     {
         _spawnManager.LoadNextWave(); // to start game
@@ -62,7 +72,6 @@ public class GameManager : MonoBehaviour
     public void AddCurrency(int amount)
     {
         Currency += amount;
-        Debug.Log("Currency: " + Currency.ToString());
     }
 
     public void Win()

@@ -35,7 +35,6 @@ public class TowerAttackState : State
 
         if (_tower.Target == null || _tower.Target.Health <= 0) 
         {
-            Debug.Log("cambia de target " + _tower.Target);
             stateMachine.ChangeState(typeof(TowerIdleState));
         }
     }
