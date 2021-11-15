@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public float Health = 100;
+    public float MaxHealth;
     public int Currency = 0;
     public int EnemiesKilled = 0;
     private SpawnManager _spawnManager;
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         _spawnManager = GetComponent<SpawnManager>();
+        MaxHealth = Health;
     }
 
     public bool Buy(int cost)
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Game Over");
             Time.timeScale = 0;
         }
+        UIManager.instance.UpdateLifeBar(Health);
     }
 
     void Update()

@@ -16,6 +16,12 @@ public class UIManager : MonoBehaviour
 
     public static UIManager instance;
 
+    private Vector3 _constructionPanelPos;
+
+    private RectTransform _lifeBar;
+    private Text _lifeBarText;
+    private Vector2 _lifeBarSize;
+
     void Awake()
     {
         if (instance == null)
@@ -30,6 +36,9 @@ public class UIManager : MonoBehaviour
         _startTime = _canvas.transform.Find("StartTime").gameObject.GetComponent<Text>();
         _money = _canvas.transform.Find("Money").gameObject.GetComponent<Text>();
         constructionPanel = _canvas.transform.Find("ConstructionMenu").gameObject.GetComponent<Image>();
+        _lifeBar = _canvas.transform.Find("HPBar/Life").gameObject.GetComponent<RectTransform>();
+        _lifeBarText = _canvas.transform.Find("HPBar/Text").gameObject.GetComponent<Text>();
+        _lifeBarSize = _lifeBar.sizeDelta;
 
         _spawnManager = GetComponent<SpawnManager>();
 
@@ -51,14 +60,25 @@ public class UIManager : MonoBehaviour
             _startTime.text = "";
         _money.text = "Money: " + GameManager.instance.Currency;
 
-        //if (constructionPanel.gameObject.activeSelf && !BuildManager.instance.IsBuilding) 
-        //   DeactivateConstructionPanel();
+
+        constructionPanel.transform.position = Camera.main.WorldToScreenPoint(_constructionPanelPos);
+    }
+
+    public void UpdateLifeBar(float hp)
+    {
+        _lifeBar.sizeDelta = new Vector2(_lifeBarSize.x * (hp / GameManager.instance.MaxHealth), _lifeBarSize.y);
+        Debug.Log(hp / GameManager.instance.MaxHealth);
+        if (hp / GameManager.instance.MaxHealth < 0.5f)
+            _lifeBar.GetComponent<Image>().color = Color.yellow;
+        if (hp / GameManager.instance.MaxHealth < 0.2f)
+            _lifeBar.GetComponent<Image>().color = Color.red;
+        _lifeBarText.text = (hp / GameManager.instance.MaxHealth * 100).ToString() + "%";
     }
 
     public void PositionConstructionPanel(Vector3 position)
     {
         constructionPanel.gameObject.SetActive(true);
-        constructionPanel.transform.position = Camera.main.WorldToScreenPoint(position);
+        _constructionPanelPos = position;
     }
 
     public void DeactivateConstructionPanel()

@@ -88,7 +88,7 @@ public class BuildManager : MonoBehaviour
     {
         if (PlayerInput.Instance.LeftMouseButton)
         {
-            _currentBuildSlot = _buildSlots[bsIndex];
+            _currentBuildSlot = IsBuilding ? _currentBuildSlot : _buildSlots[bsIndex];
             _instances[_currentPlaceholderIndex].transform.position = _currentBuildSlot.transform.position;
             _instances[_currentPlaceholderIndex].SetActive(true);
 
@@ -103,17 +103,6 @@ public class BuildManager : MonoBehaviour
 
             UIManager.instance.PositionConstructionPanel(_currentBuildSlot.transform.position);
             IsBuilding = true;
-        }
-
-        return; // TODO: FIX
-        if (_currentBuildSlot == null)
-            return;
-
-        if (PlayerInput.Instance.LeftMouseButton && GameManager.instance.Buy(_instances[_currentPlaceholderIndex].GetComponentInChildren<Tower>().Cost))
-        {
-            Instantiate(BuildableObjects[_currentPlaceholderIndex], _currentBuildSlot.transform.position, _currentBuildSlot.transform.rotation);
-            _currentBuildSlot.SetActive(false);
-            OnMouseExit();
         }
     }
 
@@ -134,7 +123,6 @@ public class BuildManager : MonoBehaviour
         if (IsBuilding) return;
         _instances[_currentPlaceholderIndex].SetActive(false);
         _currentBuildSlot = null;
-        // UIManager.instance.DeactivateConstructionPanel();
     }
 
     void Update()
