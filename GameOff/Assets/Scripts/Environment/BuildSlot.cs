@@ -13,7 +13,7 @@ public class BuildSlot : MonoBehaviour
 
     void OnMouseOver()
     {
-        BuildManager.instance.OnMouseOver();
+        BuildManager.instance.OnMouseOver(Index);
     }
 
     void OnMouseExit()

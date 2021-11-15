@@ -14,6 +14,10 @@ public class BuildManager : MonoBehaviour
 
     private GameObject _currentBuildSlot = null;
 
+    public bool IsBuilding = false;
+
+    private ConstructionMenu _constructionMenu;
+
     private void Awake()
     {
         instance = this;
@@ -21,6 +25,8 @@ public class BuildManager : MonoBehaviour
 
     void Start()
     {
+        _constructionMenu = UIManager.instance.constructionPanel.GetComponent<ConstructionMenu>();
+
         foreach (GameObject go in BuildableObjects)
         {
             GameObject current = Instantiate(go, transform.position, transform.rotation);
@@ -63,6 +69,7 @@ public class BuildManager : MonoBehaviour
 
     public void OnMouseEnter(int bsIndex)
     {
+        if (IsBuilding) return;
         _currentBuildSlot = _buildSlots[bsIndex];
         _instances[_currentPlaceholderIndex].transform.position = _currentBuildSlot.transform.position;
         _instances[_currentPlaceholderIndex].SetActive(true);
@@ -77,8 +84,28 @@ public class BuildManager : MonoBehaviour
         }
     }
 
-    public void OnMouseOver()
+    public void OnMouseOver(int bsIndex)
     {
+        if (PlayerInput.Instance.LeftMouseButton)
+        {
+            _currentBuildSlot = _buildSlots[bsIndex];
+            _instances[_currentPlaceholderIndex].transform.position = _currentBuildSlot.transform.position;
+            _instances[_currentPlaceholderIndex].SetActive(true);
+
+            if (GameManager.instance.Currency >= _instances[_currentPlaceholderIndex].GetComponentInChildren<Tower>().Cost)
+            {
+                SetAvailable();
+            }
+            else
+            {
+                SetUnavailable();
+            }
+
+            UIManager.instance.PositionConstructionPanel(_currentBuildSlot.transform.position);
+            IsBuilding = true;
+        }
+
+        return; // TODO: FIX
         if (_currentBuildSlot == null)
             return;
 
@@ -90,10 +117,35 @@ public class BuildManager : MonoBehaviour
         }
     }
 
+    public void Build(int buttonIndex)
+    {
+        if (GameManager.instance.Buy(_instances[buttonIndex].GetComponentInChildren<Tower>().Cost))
+        {
+            Instantiate(BuildableObjects[buttonIndex], _currentBuildSlot.transform.position, _currentBuildSlot.transform.rotation);
+            _currentBuildSlot.SetActive(false);
+            _instances[buttonIndex].SetActive(false);
+            IsBuilding = false;
+            UIManager.instance.DeactivateConstructionPanel();
+        }
+    }
+
     public void OnMouseExit()
     {
+        if (IsBuilding) return;
         _instances[_currentPlaceholderIndex].SetActive(false);
         _currentBuildSlot = null;
+        // UIManager.instance.DeactivateConstructionPanel();
+    }
+
+    void Update()
+    {
+        if (IsBuilding && PlayerInput.Instance.LeftMouseButton && !_constructionMenu.MouseOver)
+        {
+            _instances[_currentPlaceholderIndex].SetActive(false);
+            _currentBuildSlot = null;
+            IsBuilding = false;
+            UIManager.instance.DeactivateConstructionPanel();
+        }
     }
 
     public void SetLayerRecursively(GameObject obj, int layer)

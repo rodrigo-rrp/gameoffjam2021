@@ -12,15 +12,24 @@ public class UIManager : MonoBehaviour
     private Text _wave;
     private Text _startTime;
     private Text _money;
+    public Image constructionPanel;
+
+    public static UIManager instance;
 
     void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+
         _canvas = GameObject.FindGameObjectsWithTag("UI")[0];
         _time = _canvas.transform.Find("Time").gameObject.GetComponent<Text>();
         _killCount = _canvas.transform.Find("KillCount").gameObject.GetComponent<Text>();
         _wave = _canvas.transform.Find("Wave").gameObject.GetComponent<Text>();
         _startTime = _canvas.transform.Find("StartTime").gameObject.GetComponent<Text>();
         _money = _canvas.transform.Find("Money").gameObject.GetComponent<Text>();
+        constructionPanel = _canvas.transform.Find("ConstructionMenu").gameObject.GetComponent<Image>();
 
         _spawnManager = GetComponent<SpawnManager>();
 
@@ -28,7 +37,8 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.instance.GameIsOver) {
+        if (GameManager.instance.GameIsOver)
+        {
             _canvas.SetActive(false);
             return;
         }
@@ -40,5 +50,19 @@ public class UIManager : MonoBehaviour
         else
             _startTime.text = "";
         _money.text = "Money: " + GameManager.instance.Currency;
+
+        //if (constructionPanel.gameObject.activeSelf && !BuildManager.instance.IsBuilding) 
+        //   DeactivateConstructionPanel();
+    }
+
+    public void PositionConstructionPanel(Vector3 position)
+    {
+        constructionPanel.gameObject.SetActive(true);
+        constructionPanel.transform.position = Camera.main.WorldToScreenPoint(position);
+    }
+
+    public void DeactivateConstructionPanel()
+    {
+        constructionPanel.gameObject.SetActive(false);
     }
 }
