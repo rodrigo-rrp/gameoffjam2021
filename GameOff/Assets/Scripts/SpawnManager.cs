@@ -59,11 +59,15 @@ public class SpawnManager : MonoBehaviour
     public float currentTime;
     public int currentWave = 0;
     private GameObject[] _spawnPoints;
+    public bool isWaiting = false;
     public bool isPlaying = false;
     public int enemiesLeft = 0;
 
+    public static SpawnManager instance { get; private set; }
+
     void Awake()
     {
+        instance = this;
         _spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
     }
 
@@ -78,22 +82,26 @@ public class SpawnManager : MonoBehaviour
         {
             waves[currentWave].Spawn(_spawnPoints, this);
             waves[currentWave].hasBeenSent = true;
+            isPlaying = true;
+            isWaiting = false;
         }
     }
 
     public void LoadNextWave()
     {
-        currentWave++; 
-        if (currentWave >= waves.Length) {
+        currentWave++;
+        if (currentWave >= waves.Length)
+        {
             GameManager.instance.Win();
             currentWave = -1;
             return;
         }
-        isPlaying = true;
+        isWaiting = true;
+        isPlaying = false;
         currentTime = 0;
         enemiesLeft = waves[currentWave].enemies.ToList().Sum(x => x.count);
         Debug.Log("LOAD WAVE");
-       
+
     }
 
 }

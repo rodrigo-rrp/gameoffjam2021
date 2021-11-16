@@ -69,7 +69,7 @@ public class BuildManager : MonoBehaviour
 
     public void OnMouseEnter(int bsIndex)
     {
-        if (IsBuilding) return;
+        if (IsBuilding || SpawnManager.instance.isPlaying) return;
         _currentBuildSlot = _buildSlots[bsIndex];
         _instances[_currentPlaceholderIndex].transform.position = _currentBuildSlot.transform.position;
         _instances[_currentPlaceholderIndex].SetActive(true);
@@ -86,7 +86,7 @@ public class BuildManager : MonoBehaviour
 
     public void OnMouseOver(int bsIndex)
     {
-        if (PlayerInput.Instance.LeftMouseButton)
+        if (SpawnManager.instance.isWaiting && PlayerInput.Instance.LeftMouseButton)
         {
             _currentBuildSlot = IsBuilding ? _currentBuildSlot : _buildSlots[bsIndex];
             _instances[_currentPlaceholderIndex].transform.position = _currentBuildSlot.transform.position;
@@ -127,7 +127,7 @@ public class BuildManager : MonoBehaviour
 
     void Update()
     {
-        if (IsBuilding && PlayerInput.Instance.LeftMouseButton && !_constructionMenu.MouseOver)
+        if ((IsBuilding && PlayerInput.Instance.LeftMouseButton && !_constructionMenu.MouseOver) || SpawnManager.instance.isPlaying)
         {
             _instances[_currentPlaceholderIndex].SetActive(false);
             _currentBuildSlot = null;

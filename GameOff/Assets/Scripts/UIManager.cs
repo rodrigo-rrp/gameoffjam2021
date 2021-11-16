@@ -54,7 +54,7 @@ public class UIManager : MonoBehaviour
         _time.text = "Time: " + Mathf.RoundToInt(Time.timeSinceLevelLoad);
         _killCount.text = "Kills: " + GameManager.instance.EnemiesKilled;
         _wave.text = "WAVE " + (_spawnManager.currentWave + 1);
-        if (_spawnManager.isPlaying && !_spawnManager.waves[_spawnManager.currentWave].hasBeenSent)
+        if (_spawnManager.isWaiting)
             _startTime.text = "Starts in  " + (_spawnManager.waves[_spawnManager.currentWave].delay - (Time.deltaTime + _spawnManager.currentTime)).ToString("0") + " seconds";
         else
             _startTime.text = "";
