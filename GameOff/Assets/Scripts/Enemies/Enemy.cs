@@ -27,8 +27,6 @@ public class Enemy : Entity
 
     public void TakeDamage(float damage)
     {
-        Debug.Log("Took damage: " + damage);
-        Debug.Log("Health remaining: " + Health);
 
         Health -= damage * (Armor > 0 ? (Armor / 10) : 1);
         if (Health <= 0)

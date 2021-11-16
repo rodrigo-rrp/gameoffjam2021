@@ -8,6 +8,7 @@ TagManager:
   - Enemies
   - UI
   - SpawnPoint
+  - BuildSlot
   layers:
   - Default
   - TransparentFX
