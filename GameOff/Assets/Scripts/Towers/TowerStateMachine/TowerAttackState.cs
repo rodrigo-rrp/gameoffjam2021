@@ -11,7 +11,6 @@ public class TowerAttackState : State
     public TowerAttackState(Tower tower, StateMachine sm) : base(tower, sm)
     {
         _tower = tower;
-        _cannonPosition = _tower.transform.Find("Cannon").position;
         _lastAttackTime = Time.time;
     }
 
@@ -22,12 +21,9 @@ public class TowerAttackState : State
 
     public override void OnStay()
     {
-        float angle = Vector3.Angle(_tower.transform.forward, _tower.Target.transform.position);
-        Debug.Log(_tower.transform.eulerAngles.y);
-        Debug.Log(angle);
-        _tower.transform.eulerAngles = new Vector3(0, angle, 0);
         if (Time.time - _lastAttackTime > _tower.AttackCooldown)
         {
+            _cannonPosition = _tower.transform.Find("Cannon").position;
             GameObject _bullet = GameObject.Instantiate(_tower.Bullet, _cannonPosition, Quaternion.identity);
 
             Bullet bullet = _bullet.GetComponent<Bullet>();
@@ -42,6 +38,8 @@ public class TowerAttackState : State
         {
             stateMachine.ChangeState(typeof(TowerIdleState));
         }
+        else // TODO: smooth this
+            _tower.transform.LookAt(new Vector3(_tower.Target.transform.position.x, _tower.transform.position.y, _tower.Target.transform.position.z));
     }
 
     public override void OnExit()

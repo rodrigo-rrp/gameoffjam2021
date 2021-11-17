@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 50
-  DistanceToAttack: 10.78
+  DistanceToAttack: 13
   AttackCooldown: 2
   AttackSpeed: 0
   _transform: {fileID: 0}
