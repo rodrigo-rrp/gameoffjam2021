@@ -3,7 +3,7 @@
   "Assemblies": [
     {
       "FullName": "Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2021-11-16T20:45:58.5963558Z"
+      "LastWriteTime": "2021-11-17T01:48:20.5236503Z"
     },
     {
       "FullName": "netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51",
@@ -18,7 +18,7 @@
     {
       "FullName": "System.Int32 Unity.Burst.Intrinsics.X86::DoGetCSRTrampoline()",
       "ModuleOptionsHash": 8794384452606821980,
-      "ModuleHash": "8c66e6ea8ac95bd53655425bcbf46768",
+      "ModuleHash": "8550d63643fb834bbf4c39b9b7576c06",
       "LinkName": "CDCA4A5193BE5947",
       "AssemblyDependencyIndices": [
         0,
@@ -29,7 +29,7 @@
     {
       "FullName": "System.Void Unity.Burst.Intrinsics.X86::DoSetCSRTrampoline(System.Int32)",
       "ModuleOptionsHash": 8794384452606821980,
-      "ModuleHash": "a72004829912ff6abd58d69a34665b38",
+      "ModuleHash": "85640083a50fe0411cd91ef19af022a0",
       "LinkName": "801E9A000BB37B05",
       "AssemblyDependencyIndices": [
         0,

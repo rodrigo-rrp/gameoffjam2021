@@ -26,6 +26,7 @@ public class TowerIdleState: State
                 stateMachine.ChangeState(typeof(TowerAttackState));
             }
         }
+        _tower.transform.eulerAngles = new Vector3(0, _tower.transform.eulerAngles.y + _tower.RotationSpeed * Time.deltaTime, 0);
     }
 
     public override void OnExit()

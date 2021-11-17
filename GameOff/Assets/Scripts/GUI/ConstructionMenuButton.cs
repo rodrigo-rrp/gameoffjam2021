@@ -26,6 +26,7 @@ public class ConstructionMenuButton : MonoBehaviour, IPointerEnterHandler, IPoin
         _selectedGO.SetActive(true);
         _popoverGO.SetActive(true);
         MouseOver = true;
+        BuildManager.instance.OnBuildButtonEnter(Index);
     }
     public void OnPointerExit(PointerEventData eventData)
     {

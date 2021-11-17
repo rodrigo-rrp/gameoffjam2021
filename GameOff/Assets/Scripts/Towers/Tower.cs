@@ -9,6 +9,7 @@ public class Tower : Entity
     public GameObject Bullet;
     public Enemy Target;
     public float BulletSpeed;
+    public float RotationSpeed;
     public int Cost;
 
     public override void Awake()

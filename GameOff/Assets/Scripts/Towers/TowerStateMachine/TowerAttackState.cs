@@ -17,10 +17,15 @@ public class TowerAttackState : State
 
     public override void OnEnter()
     {
+
     }
 
     public override void OnStay()
     {
+        float angle = Vector3.Angle(_tower.transform.forward, _tower.Target.transform.position);
+        Debug.Log(_tower.transform.eulerAngles.y);
+        Debug.Log(angle);
+        _tower.transform.eulerAngles = new Vector3(0, angle, 0);
         if (Time.time - _lastAttackTime > _tower.AttackCooldown)
         {
             GameObject _bullet = GameObject.Instantiate(_tower.Bullet, _cannonPosition, Quaternion.identity);

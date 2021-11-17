@@ -30,7 +30,7 @@ public class BuildManager : MonoBehaviour
         foreach (GameObject go in BuildableObjects)
         {
             GameObject current = Instantiate(go, transform.position, transform.rotation);
-            current.GetComponentInChildren<Tower>().enabled = false;
+            // current.GetComponentInChildren<Tower>().enabled = false;
             SetLayerRecursively(current, LayerMask.NameToLayer("Ignore Raycast"));
             current.SetActive(false);
             _instances.Add(current);
@@ -71,6 +71,11 @@ public class BuildManager : MonoBehaviour
     {
         if (IsBuilding || SpawnManager.instance.isPlaying) return;
         _currentBuildSlot = _buildSlots[bsIndex];
+        _spawnPlaceholder();
+    }
+
+    private void _spawnPlaceholder()
+    {
         _instances[_currentPlaceholderIndex].transform.position = _currentBuildSlot.transform.position;
         _instances[_currentPlaceholderIndex].SetActive(true);
 
@@ -82,6 +87,13 @@ public class BuildManager : MonoBehaviour
         {
             SetUnavailable();
         }
+    }
+
+    public void OnBuildButtonEnter(int index)
+    {
+        _instances[_currentPlaceholderIndex].SetActive(false);
+        _currentPlaceholderIndex = index;
+        _spawnPlaceholder();
     }
 
     public void OnMouseOver(int bsIndex)
@@ -112,7 +124,7 @@ public class BuildManager : MonoBehaviour
         {
             Instantiate(BuildableObjects[buttonIndex], _currentBuildSlot.transform.position, _currentBuildSlot.transform.rotation);
             _currentBuildSlot.SetActive(false);
-            _instances[buttonIndex].SetActive(false);
+            _instances[_currentPlaceholderIndex].SetActive(false);
             IsBuilding = false;
             UIManager.instance.DeactivateConstructionPanel();
         }
