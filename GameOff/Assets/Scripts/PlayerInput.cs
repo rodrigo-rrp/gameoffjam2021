@@ -9,6 +9,7 @@ public class PlayerInput : MonoBehaviour
     public float HorizontalInput { get; private set; }
     public float VerticalInput { get; private set; }
     public bool LeftMouseButton { get; private set; }
+    public bool PauseMenuKey { get; private set; }
    
     void Awake()
     {
@@ -20,6 +21,7 @@ public class PlayerInput : MonoBehaviour
         this.HorizontalInput = Input.GetAxis("Horizontal");
         this.VerticalInput = Input.GetAxis("Vertical");
         this.LeftMouseButton = Input.GetMouseButton(0);
+        this.PauseMenuKey = Input.GetKeyDown(KeyCode.Escape);
 
     }
 }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private SpawnManager _spawnManager;
 
     public bool GameIsOver = false;
+    public bool GameIsPaused = false;
 
     void Awake()
     {
@@ -60,6 +61,21 @@ public class GameManager : MonoBehaviour
     {
         if (GameIsOver) return;
 
+        if (PlayerInput.Instance.PauseMenuKey)
+        {
+            GameIsPaused = !GameIsPaused;
+            if (GameIsPaused)
+            {
+                Time.timeScale = 0;
+                UIManager.instance.ActivatePauseMenu();
+            }
+            else
+            {
+                ResumeGame();
+            }
+            return;
+        }
+
         if (_spawnManager.waves[_spawnManager.currentWave].hasBeenSent && _spawnManager.enemiesLeft == 0)
         {
             _spawnManager.LoadNextWave();
@@ -82,6 +98,24 @@ public class GameManager : MonoBehaviour
         Debug.Log("You Win");
         Time.timeScale = 0;
         GameIsOver = true;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        GameIsPaused = false;
+        UIManager.instance.DeactivatePauseMenu();
+    }
+
+    public void RestartGame()
+    {
+        ResumeGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 

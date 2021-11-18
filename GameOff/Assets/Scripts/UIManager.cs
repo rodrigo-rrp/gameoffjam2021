@@ -22,6 +22,8 @@ public class UIManager : MonoBehaviour
     private Text _lifeBarText;
     private Vector2 _lifeBarSize;
 
+    private GameObject _pauseMenu;
+
     void Awake()
     {
         if (instance == null)
@@ -39,6 +41,9 @@ public class UIManager : MonoBehaviour
         _lifeBar = _canvas.transform.Find("HPBar/Life").gameObject.GetComponent<RectTransform>();
         _lifeBarText = _canvas.transform.Find("HPBar/Text").gameObject.GetComponent<Text>();
         _lifeBarSize = _lifeBar.sizeDelta;
+
+        
+        _pauseMenu = _canvas.transform.Find("PauseMenu").gameObject;
 
         _spawnManager = GetComponent<SpawnManager>();
 
@@ -84,5 +89,15 @@ public class UIManager : MonoBehaviour
     public void DeactivateConstructionPanel()
     {
         constructionPanel.gameObject.SetActive(false);
+    }
+
+    public void ActivatePauseMenu()
+    {
+        _pauseMenu.SetActive(true);
+    }
+
+    public void DeactivatePauseMenu()
+    {
+        _pauseMenu.SetActive(false);
     }
 }
