@@ -24,6 +24,7 @@ public class TowerIdleState: State
             {
                 _tower.Target = target;
                 stateMachine.ChangeState(typeof(TowerAttackState));
+                break;
             }
         }
         _tower.transform.eulerAngles = new Vector3(0, _tower.transform.eulerAngles.y + _tower.RotationSpeed * Time.deltaTime, 0);
