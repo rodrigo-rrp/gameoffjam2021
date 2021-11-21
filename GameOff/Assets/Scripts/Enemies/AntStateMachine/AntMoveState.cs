@@ -16,15 +16,16 @@ public class AntMoveState: State
     public override void OnEnter()
     {
         _target = GameObject.FindGameObjectWithTag("Target").transform;
-        _ant.agent.destination = _target.position;
+        //_ant.agent.destination = _target.position;
     }
 
     public override void OnStay()
     {
         // Ant ant = owner.GetComponent<Ant>();
+        Debug.DrawLine(_ant.transform.position, _ant.transform.position - _ant.transform.forward, Color.blue);
         if (_target != null)
         {
-            //ant._transform.position = Vector3.MoveTowards(ant._transform.position, _target.position, Time.deltaTime * ant.Speed);   
+            _ant._transform.position = Vector3.MoveTowards(_ant._transform.position, _target.position, Time.deltaTime * _ant.Speed);   
             if (Vector3.Distance(owner._transform.position, _target.position) < _ant.DistanceToAttack)
             {
                 stateMachine.ChangeState(typeof(AntAttackState));

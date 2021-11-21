@@ -45,10 +45,16 @@
 *.tga filter=lfs diff=lfs merge=lfs -text
 *.tif filter=lfs diff=lfs merge=lfs -text
 *.tiff filter=lfs diff=lfs merge=lfs -text
-
 # Collapse Unity-generated files on GitHub
 *.asset linguist-generated
 *.mat linguist-generated
 *.meta linguist-generated
 *.prefab linguist-generated
 *.unity linguist-generated
+GameOff/Library/Artifacts/de/de0237ad5f1ee68ff3637f16cb271c30 filter=lfs diff=lfs merge=lfs -text
+GameOff/Library/Artifacts/ed/edb6395ed2515b59d35b16a4ad26dd45 filter=lfs diff=lfs merge=lfs -text
+GameOff/Library filter=lfs diff=lfs merge=lfs -text
+GameOff/Library/Artifacts/** filter=lfs diff=lfs merge=lfs -text
+GameOff/Library/** filter=lfs diff=lfs merge=lfs -text
+GameOff/Library/**/* filter=lfs diff=lfs merge=lfs -text
+GameOff/Library/Artifacts/de/** filter=lfs diff=lfs merge=lfs -text

@@ -4849,7 +4849,7 @@ MonoBehaviour:
   waves:
   - enemies:
     - enemy: {fileID: 1133305674520968521, guid: b732d160e6131104695c6075c1052ffc, type: 3}
-      count: 3
+      count: 1
       spawnPoint: {x: 0, y: 0, z: 0}
       reward: 5
       delay: 1
