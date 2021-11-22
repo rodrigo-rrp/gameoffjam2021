@@ -24,12 +24,12 @@ public class TowerAttackState : State
         if (Time.time - _lastAttackTime > _tower.AttackCooldown)
         {
             _cannonPosition = _tower.transform.Find("Cannon").position;
-            GameObject _bullet = GameObject.Instantiate(_tower.Bullet, _cannonPosition, Quaternion.identity);
+            GameObject _ammoGO = GameObject.Instantiate(_tower.Bullet, _cannonPosition, Quaternion.identity);
 
-            Bullet bullet = _bullet.GetComponent<Bullet>();
-            bullet.Damage = _tower.Damage;
-            bullet.Speed = _tower.BulletSpeed;
-            bullet.Target = _tower.Target;
+            TowerAmmo ammo = _ammoGO.GetComponent<TowerAmmo>();
+            ammo.Damage = _tower.Damage;
+            ammo.Speed = _tower.BulletSpeed;
+            ammo.Target = _tower.Target;
 
             _lastAttackTime = Time.time;
         }

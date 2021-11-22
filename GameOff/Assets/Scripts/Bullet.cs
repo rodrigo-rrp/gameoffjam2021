@@ -2,26 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : TowerAmmo
 {
-    public float Damage;
-    public float Speed;
-    public Enemy Target;
-
-    void Update()
+    public override void Update()
     {
-        if (Target == null) {
+        if (Target == null)
+        {
             Destroy(gameObject);
             return;
         }
-        transform.LookAt(Target.transform);
-        GetComponent<Rigidbody>().velocity = transform.forward * Speed;
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawRay(transform.position, transform.forward * 5);
+        base.Update();
     }
 
     void OnCollisionEnter(Collision collision)

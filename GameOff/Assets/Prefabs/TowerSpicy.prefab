@@ -222,16 +222,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfabf24767c362478b078d07469e170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 50
-  DistanceToAttack: 13
-  AttackCooldown: 2
+  Damage: 90
+  DistanceToAttack: 21
+  AttackCooldown: 5
   AttackSpeed: 0
   _transform: {fileID: 0}
-  Bullet: {fileID: 2442991428636851225, guid: 8d7d579335babab4a8ec97a2c77d95cc, type: 3}
+  Bullet: {fileID: 2442991428636851225, guid: a5b7f1701bbff47419f5d176a0b86cd2, type: 3}
   Target: {fileID: 0}
-  BulletSpeed: 10
+  BulletSpeed: 12
   RotationSpeed: 10
-  Cost: 10
+  Cost: 15
 --- !u!1 &4599212576971650290
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,6 +29,7 @@ public class Enemy : Entity
     }
     public override void Update()
     {
+        _lifeBarRectTransform.gameObject.transform.LookAt(Camera.main.transform);
         base.Update();
     }
 
@@ -36,7 +37,7 @@ public class Enemy : Entity
     {
         if (_bloodParticles != null)
             _bloodParticles.Play();
-        Health -= damage * (Armor > 0 ? (Armor / 10) : 1);
+        Health += -damage + damage * (Armor > 0 ? (Armor / 10) : 1);
 
         if (Health <= 0)
         {
