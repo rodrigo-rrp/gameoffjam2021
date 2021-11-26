@@ -154,7 +154,8 @@ public class BuildManager : MonoBehaviour
 
     public void SetLayerRecursively(GameObject obj, int layer)
     {
-        obj.layer = layer;
+        if (obj.layer != LayerMask.NameToLayer("MiniMap"))
+            obj.layer = layer;
 
         foreach (Transform child in obj.transform)
         {
