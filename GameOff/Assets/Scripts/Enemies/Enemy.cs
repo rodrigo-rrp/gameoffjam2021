@@ -17,7 +17,8 @@ public class Enemy : Entity
 
     private RectTransform _lifeBarRectTransform;
     private float _lifeBarWidth;
-
+    internal Animator _animator;
+    private bool _IsDead = false;
     public override void Awake()
     {
         base.Awake();
@@ -26,18 +27,35 @@ public class Enemy : Entity
         _lifeBarRectTransform = transform.Find("Canvas/LifeBar").GetComponent<RectTransform>();
         _lifeBarWidth = _lifeBarRectTransform.sizeDelta.x;
         _maxHealth = Health;
+        _animator = GetComponent<Animator>();
     }
     public override void Update()
     {
         _lifeBarRectTransform.gameObject.transform.LookAt(Camera.main.transform);
+        if (_IsDead)
+        { 
+            _transform.position = new Vector3(_transform.position.x, _transform.position.y -0.1f * Time.deltaTime, _transform.position.z);
+        }
         base.Update();
+    }
+
+    public void SetDead() 
+    {
+        agent.enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
+        _IsDead = true;
+        Invoke("Destroy", 8f);
+    }
+    private void Destroy()
+    {
+        Destroy(gameObject);
     }
 
     public void TakeDamage(float damage)
     {
         if (_bloodParticles != null)
             _bloodParticles.Play();
-        Health += -damage + damage * (Armor > 0 ? (Armor / 10) : 1);
+        Health += -damage + (Armor > 0 ? damage * (Armor / 10) : 0);
 
         if (Health <= 0)
         {
@@ -46,9 +64,7 @@ public class Enemy : Entity
             GameManager.instance.AddCurrency(Reward);
             GameManager.instance.AddEnemyKill();
         }
-        else
-        {
-            _lifeBarRectTransform.sizeDelta = new Vector2(_lifeBarWidth * (Health / _maxHealth), _lifeBarRectTransform.sizeDelta.y);
-        }
+        
+        _lifeBarRectTransform.sizeDelta = new Vector2(_lifeBarWidth * (Health / _maxHealth), _lifeBarRectTransform.sizeDelta.y);
     }
 }

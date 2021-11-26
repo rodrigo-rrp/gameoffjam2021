@@ -6,7 +6,7 @@ public class Bullet : TowerAmmo
 {
     public override void Update()
     {
-        if (Target == null)
+        if (Target == null || Target.Health <= 0)
         {
             Destroy(gameObject);
             return;
