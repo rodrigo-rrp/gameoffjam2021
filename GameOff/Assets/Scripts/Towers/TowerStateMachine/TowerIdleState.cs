@@ -20,6 +20,7 @@ public class TowerIdleState: State
     {
         _targets = GameObject.FindObjectsOfType<Enemy>();
         foreach(var target in _targets) {
+            Debug.Log("Target: " + target.name + "(" + target.Health + ") - Distance: " + Vector3.Distance(target.transform.position, _tower.transform.position));
             if (target.Health > 0 && Vector3.Distance(owner.transform.position, target.transform.position) < owner.DistanceToAttack)
             {
                 _tower.Target = target;

@@ -21,5 +21,7 @@ public class Tower : Entity
         stateMachine.AddState(new TowerAttackState(this, stateMachine));
         stateMachine.AddState(new TowerDeadState(this, stateMachine));
         base.Awake();
+
+        transform.parent.Find("MiniMap").gameObject.SetActive(true);
     }
 }

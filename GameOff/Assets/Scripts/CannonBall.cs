@@ -39,6 +39,7 @@ public class CannonBall : TowerAmmo
         Collider[] colliders = Physics.OverlapSphere(transform.position, DamageRadius);
         foreach (Collider collider in colliders)
         {
+            Debug.Log("Collider: " + collider.name);
             if (collider.gameObject.tag == "Enemies")
             {
                 collider.gameObject.GetComponent<Enemy>().TakeDamage(Damage);

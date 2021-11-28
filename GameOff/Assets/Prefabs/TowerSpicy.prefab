@@ -391,12 +391,12 @@ GameObject:
   - component: {fileID: 9053379548614909221}
   - component: {fileID: 5633952548892138903}
   m_Layer: 8
-  m_Name: r
+  m_Name: MiniMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &808894390281975057
 Transform:
   m_ObjectHideFlags: 0
