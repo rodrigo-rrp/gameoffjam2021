@@ -9,8 +9,8 @@ public class UIManager : MonoBehaviour
     private GameObject _canvas;
     private Text _time;
     private Text _killCount;
-    private Text _wave;
-    private Text _startTime;
+    private Text _bigText;
+    private Text _smallText;
     private Text _money;
     public Image constructionPanel;
 
@@ -33,16 +33,15 @@ public class UIManager : MonoBehaviour
 
         _canvas = GameObject.FindGameObjectsWithTag("UI")[0];
         _time = _canvas.transform.Find("Time").gameObject.GetComponent<Text>();
-        _killCount = _canvas.transform.Find("KillCount").gameObject.GetComponent<Text>();
-        _wave = _canvas.transform.Find("Wave").gameObject.GetComponent<Text>();
-        _startTime = _canvas.transform.Find("StartTime").gameObject.GetComponent<Text>();
         _money = _canvas.transform.Find("Money").gameObject.GetComponent<Text>();
         constructionPanel = _canvas.transform.Find("ConstructionMenu").gameObject.GetComponent<Image>();
-        _lifeBar = _canvas.transform.Find("HPBar/Life").gameObject.GetComponent<RectTransform>();
-        _lifeBarText = _canvas.transform.Find("HPBar/Text").gameObject.GetComponent<Text>();
+        _lifeBar = _canvas.transform.Find("Bottom/Life").gameObject.GetComponent<RectTransform>();
+        _lifeBarText = _canvas.transform.Find("Bottom/Text").gameObject.GetComponent<Text>();
+        _smallText = _canvas.transform.Find("Bottom/Small_Text").gameObject.GetComponent<Text>();
+        _bigText = _canvas.transform.Find("Bottom/Big_Text").gameObject.GetComponent<Text>();
         _lifeBarSize = _lifeBar.sizeDelta;
 
-        
+
         _pauseMenu = _canvas.transform.Find("PauseMenu").gameObject;
 
         _spawnManager = GetComponent<SpawnManager>();
@@ -56,14 +55,17 @@ public class UIManager : MonoBehaviour
             _canvas.SetActive(false);
             return;
         }
-        _time.text = "Time: " + Mathf.RoundToInt(Time.timeSinceLevelLoad);
-        _killCount.text = "Kills: " + GameManager.instance.EnemiesKilled;
-        _wave.text = "WAVE " + (_spawnManager.currentWave + 1);
         if (_spawnManager.isWaiting)
-            _startTime.text = "Starts in  " + (_spawnManager.waves[_spawnManager.currentWave].delay - (Time.deltaTime + _spawnManager.currentTime)).ToString("0") + " seconds";
+        {
+            _smallText.text = "UNTIL WAVE " + (_spawnManager.currentWave + 1);
+            _bigText.text = (_spawnManager.waves[_spawnManager.currentWave].delay - (Time.deltaTime + _spawnManager.currentTime)).ToString("0:00");
+        }
         else
-            _startTime.text = "";
-        _money.text = "Money: " + GameManager.instance.Currency;
+        {
+            _smallText.text = "";
+            _bigText.text = "WAVE " + (_spawnManager.currentWave + 1);
+        }
+        _money.text = GameManager.instance.Currency.ToString();
 
 
         constructionPanel.transform.position = Camera.main.WorldToScreenPoint(_constructionPanelPos);
@@ -72,11 +74,10 @@ public class UIManager : MonoBehaviour
     public void UpdateLifeBar(float hp)
     {
         _lifeBar.sizeDelta = new Vector2(_lifeBarSize.x * (hp / GameManager.instance.MaxHealth), _lifeBarSize.y);
-        Debug.Log(hp / GameManager.instance.MaxHealth);
         if (hp / GameManager.instance.MaxHealth < 0.5f)
-            _lifeBar.GetComponent<Image>().color = Color.yellow;
+            _lifeBar.GetComponent<Image>().color = new Color(248, 213, 72);
         if (hp / GameManager.instance.MaxHealth < 0.2f)
-            _lifeBar.GetComponent<Image>().color = Color.red;
+            _lifeBar.GetComponent<Image>().color = new Color(240, 65, 65);
         _lifeBarText.text = (hp / GameManager.instance.MaxHealth * 100).ToString() + "%";
     }
 
