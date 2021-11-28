@@ -19,6 +19,11 @@ public class Enemy : Entity
     private float _lifeBarWidth;
     internal Animator _animator;
     private bool _IsDead = false;
+    public AudioClip[] AttackSFX;
+    public AudioClip WalkSFX;
+    public AudioClip DeathSFX;
+    public AudioClip HitSFX;
+    
     public override void Awake()
     {
         base.Awake();

@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public bool GameIsOver = false;
     public bool GameIsPaused = false;
 
+    private MusicManager _musicManager;
+
     void Awake()
     {
         if (instance == null)
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
         }
         _spawnManager = GetComponent<SpawnManager>();
         MaxHealth = Health;
+        _musicManager = MusicManager.instance;
     }
 
     public bool Buy(int cost)
