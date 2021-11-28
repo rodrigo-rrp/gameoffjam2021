@@ -16,7 +16,7 @@ public class TowerAttackState : State
 
     public override void OnEnter()
     {
-
+        _tower.transform.LookAt(new Vector3(_tower.Target.transform.position.x, _tower.transform.position.y, _tower.Target.transform.position.z));
     }
 
     public override void OnStay()
@@ -25,6 +25,7 @@ public class TowerAttackState : State
         {
             _cannonPosition = _tower.transform.Find("Cannon").position;
             GameObject _ammoGO = GameObject.Instantiate(_tower.Bullet, _cannonPosition, Quaternion.identity);
+            _tower.PlaySFX(_tower.ShotSFX);
 
             TowerAmmo ammo = _ammoGO.GetComponent<TowerAmmo>();
             ammo.Damage = _tower.Damage;

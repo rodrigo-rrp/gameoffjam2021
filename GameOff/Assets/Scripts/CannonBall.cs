@@ -7,10 +7,12 @@ public class CannonBall : TowerAmmo
     public float DamageRadius;
     private ParticleSystem _explosionParticles;
     private bool _exploded = false;
+    private AudioSource _audioSource;
 
     void Awake()
     {
-        _explosionParticles = transform.Find("BigExplosionEffect").GetComponent<ParticleSystem>(); ;
+        _explosionParticles = transform.Find("BigExplosionEffect").GetComponent<ParticleSystem>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public override void Update()
@@ -44,6 +46,7 @@ public class CannonBall : TowerAmmo
         }
         _exploded = true;
         _explosionParticles.Play();
+        _audioSource.PlayOneShot(_audioSource.clip);
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         GetComponent<Collider>().enabled = false;

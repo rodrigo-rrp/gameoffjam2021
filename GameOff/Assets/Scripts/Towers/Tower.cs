@@ -12,6 +12,8 @@ public class Tower : Entity
     public float RotationSpeed;
     public int Cost;
 
+    public AudioClip ShotSFX;
+
     public override void Awake()
     {
         stateMachine = new StateMachine();

@@ -11,10 +11,12 @@ public class Entity : MonoBehaviour
 
     public StateMachine stateMachine;
     public Transform _transform;
+    public AudioSource audioSource;
 
     public virtual void Awake()
     {
         _transform = GetComponent<Transform>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public virtual void Start()
@@ -37,5 +39,11 @@ public class Entity : MonoBehaviour
     {
         if (stateMachine != null && stateMachine.currentState != null)
             UnityEditor.Handles.Label(transform.position + transform.up, stateMachine.currentState.ToString());
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        if (audioSource != null)
+            audioSource.PlayOneShot(clip);
     }
 }

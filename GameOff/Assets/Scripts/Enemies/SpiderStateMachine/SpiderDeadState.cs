@@ -13,6 +13,7 @@ public class SpiderDeadState : State
     public override void OnEnter()
     {
         _Spider.GetComponent<Animation>().Play("Spider_Armature|die");
+        _Spider.PlaySFX(_Spider.DeathSFX);
         _Spider.SetDead();
     }
 
