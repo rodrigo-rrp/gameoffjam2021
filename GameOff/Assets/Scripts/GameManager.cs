@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _spawnManager.LoadNextWave(); // to start game
-        _musicManager.PlayWaitForBattleTheme();
     }
 
     public void Damage(float damage)

@@ -46,6 +46,7 @@ public class BuildManager : MonoBehaviour
 
     void SetAvailable()
     {
+        return;
         GameObject current = _instances[_currentPlaceholderIndex];
         Renderer[] renderers = current.GetComponentsInChildren<Renderer>();
         foreach (Renderer renderer in renderers)
@@ -61,6 +62,7 @@ public class BuildManager : MonoBehaviour
 
     void SetUnavailable()
     {
+        return;
         GameObject current = _instances[_currentPlaceholderIndex];
         Color lowOpacityColor = current.GetComponentInChildren<Renderer>().material.color;
         lowOpacityColor.a = 0.5f;
