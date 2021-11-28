@@ -5484,7 +5484,7 @@ MonoBehaviour:
   BuildableObjects:
   - {fileID: 4599212576971650290, guid: fa64e8354fddac84ca27fb1eaee9a815, type: 3}
   - {fileID: 4599212576971650290, guid: 2d01c66fab650e0418e32deb81a085d3, type: 3}
-  - {fileID: 4599212576971650290, guid: 2d01c66fab650e0418e32deb81a085d3, type: 3}
+  - {fileID: 4599212576971650290, guid: fb3564837c809aa4fa92c619961987cf, type: 3}
   IsBuilding: 0
 --- !u!82 &1688996673
 AudioSource:
