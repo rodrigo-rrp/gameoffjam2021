@@ -52,11 +52,10 @@ public class GameManager : MonoBehaviour
     public void Damage(float damage)
     {
         Health -= damage;
-        Debug.Log("Health: " + Health.ToString());
         if (Health <= 0)
         {
-            Health = 0;
-            Debug.Log("Game Over");
+            Health = 0; 
+            UIManager.instance.GameOver(false);
             Time.timeScale = 0;
         }
         UIManager.instance.UpdateLifeBar(Health);
@@ -100,7 +99,7 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
-        Debug.Log("You Win");
+        UIManager.instance.GameOver(true);
         Time.timeScale = 0;
         GameIsOver = true;
     }

@@ -20,6 +20,8 @@ public class MusicManager : MonoBehaviour
     public AudioClip BuySFX;
     public AudioClip CantBuySFX;
 
+    public AudioSource ClockTickAudioSource;
+
     void Awake()
     {
         instance = this;
@@ -50,6 +52,11 @@ public class MusicManager : MonoBehaviour
     public void CantBuy()
     {
         SFXAudioSource.PlayOneShot(CantBuySFX);
+    }
+
+    public void PlayClockTicks()
+    {
+        ClockTickAudioSource.PlayOneShot(ClockTickAudioSource.clip);
     }
 
 

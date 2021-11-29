@@ -23,6 +23,7 @@ public class UIManager : MonoBehaviour
     private Vector2 _lifeBarSize;
 
     private GameObject _pauseMenu;
+    private GameObject _gameOverMenu;
 
     void Awake()
     {
@@ -52,13 +53,19 @@ public class UIManager : MonoBehaviour
     {
         if (GameManager.instance.GameIsOver)
         {
-            _canvas.SetActive(false);
             return;
         }
         if (_spawnManager.isWaiting)
         {
             _smallText.text = "UNTIL WAVE " + (_spawnManager.currentWave + 1);
             _bigText.text = (_spawnManager.waves[_spawnManager.currentWave].delay - (Time.deltaTime + _spawnManager.currentTime)).ToString("0:00");
+            float seconds = float.Parse((_spawnManager.waves[_spawnManager.currentWave].delay - (Time.deltaTime + _spawnManager.currentTime)).ToString("0"));
+            Debug.Log(seconds);
+            if (seconds == 5f && !MusicManager.instance.ClockTickAudioSource.isPlaying)
+            {
+                MusicManager.instance.PlayClockTicks();
+                Debug.Log("play music");
+            }
         }
         else
         {
@@ -75,9 +82,9 @@ public class UIManager : MonoBehaviour
     {
         _lifeBar.sizeDelta = new Vector2(_lifeBarSize.x * (hp / GameManager.instance.MaxHealth), _lifeBarSize.y);
         if (hp / GameManager.instance.MaxHealth < 0.5f)
-            _lifeBar.GetComponent<Image>().color = new Color(248, 213, 72);
+            _lifeBar.GetComponent<Image>().color = new Color(248 / 255f, 213 / 255f, 72 / 255f);
         if (hp / GameManager.instance.MaxHealth < 0.2f)
-            _lifeBar.GetComponent<Image>().color = new Color(240, 65, 65);
+            _lifeBar.GetComponent<Image>().color = new Color(240 / 255f, 65 / 255f, 65 / 255f);
         _lifeBarText.text = (hp / GameManager.instance.MaxHealth * 100).ToString() + "%";
     }
 
@@ -100,5 +107,13 @@ public class UIManager : MonoBehaviour
     public void DeactivatePauseMenu()
     {
         _pauseMenu.SetActive(false);
+    }
+
+    public void GameOver(bool won)
+    {
+        _gameOverMenu = _canvas.transform.Find("GameOver").gameObject;
+        _gameOverMenu.SetActive(true);
+        _gameOverMenu.transform.Find("Final Result").GetComponent<Text>().text = won ? "YOU WON" : "YOU LOST";
+        _gameOverMenu.transform.Find("Final Result Shadow").GetComponent<Text>().text = won ? "YOU WON" : "YOU LOST";
     }
 }
