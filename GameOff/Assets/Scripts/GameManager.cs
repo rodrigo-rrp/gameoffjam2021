@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         }
         _spawnManager = GetComponent<SpawnManager>();
         MaxHealth = Health;
-        _musicManager = MusicManager.instance;
+        _musicManager = GetComponent<MusicManager>();
     }
 
     public bool Buy(int cost)
@@ -37,8 +37,10 @@ public class GameManager : MonoBehaviour
         if (Currency >= cost)
         {
             Currency -= cost;
+            _musicManager.Buy();
             return true;
         }
+        _musicManager.CantBuy();
         return false;
     }
 

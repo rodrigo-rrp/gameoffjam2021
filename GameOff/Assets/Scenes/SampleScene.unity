@@ -13744,7 +13744,10 @@ MonoBehaviour:
   waitForBattleTheme: {fileID: 8300000, guid: de0301af85db2604ca569aa868c06a23, type: 3}
   birdsSFXs: []
   HitSFX: {fileID: 0}
-  HornAudioSource: {fileID: 1688996677}
+  SFXAudioSource: {fileID: 1688996677}
+  HornSFX: {fileID: 8300000, guid: 7a890f4d78e034a46983182cb5a8b3cc, type: 3}
+  BuySFX: {fileID: 8300000, guid: e09f2a9ffa5801e4e9251e8325bfe82f, type: 3}
+  CantBuySFX: {fileID: 8300000, guid: 0f84fcee683889144962b7a3300de617, type: 3}
 --- !u!82 &1688996675
 AudioSource:
   m_ObjectHideFlags: 0

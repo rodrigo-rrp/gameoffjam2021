@@ -14,7 +14,11 @@ public class MusicManager : MonoBehaviour
     public static MusicManager instance { get; private set; }
 
     private DoubleAudioSource _doubleAudioSource;
-    public AudioSource HornAudioSource;
+    public AudioSource SFXAudioSource;
+
+    public AudioClip HornSFX;
+    public AudioClip BuySFX;
+    public AudioClip CantBuySFX;
 
     void Awake()
     {
@@ -28,7 +32,7 @@ public class MusicManager : MonoBehaviour
         if (!_audioSource.clip || _audioSource.clip != battleTheme)
         {
             _doubleAudioSource.CrossFade(battleTheme, 0.3f, 7f);
-            HornAudioSource.PlayOneShot(HornAudioSource.clip);
+            SFXAudioSource.PlayOneShot(HornSFX);
         }
     }
     public void PlayWaitForBattleTheme()
@@ -36,6 +40,16 @@ public class MusicManager : MonoBehaviour
         // _audioSource.clip = waitForBattleTheme;
         _doubleAudioSource.CrossFade(waitForBattleTheme, 0.4f, 4f);
         // _audioSource.Play();
+    }
+
+    public void Buy()
+    {
+        SFXAudioSource.PlayOneShot(BuySFX);
+    }
+
+    public void CantBuy()
+    {
+        SFXAudioSource.PlayOneShot(CantBuySFX);
     }
 
 
