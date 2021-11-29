@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 4599212576755552243}
   - component: {fileID: 4599212576755552240}
   - component: {fileID: 5348308219763663865}
+  - component: {fileID: 6446509664454279351}
   m_Layer: 6
   m_Name: Tower
   m_TagString: Untagged
@@ -231,7 +232,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   Bullet: {fileID: 2442991428636851225, guid: 8d7d579335babab4a8ec97a2c77d95cc, type: 3}
   Target: {fileID: 0}
-  BulletSpeed: 10
+  BulletSpeed: 15
   RotationSpeed: 10
   Cost: 10
   ShotSFX: {fileID: 8300000, guid: 21a6cd98a6d676b4eac093887f055c3b, type: 3}
@@ -331,6 +332,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!208 &6446509664454279351
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4599212576755552254}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.95, y: 1.675, z: 0.855}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.76, z: -0.32}
+  m_TimeToStationary: 0.5
 --- !u!1 &4599212576971650290
 GameObject:
   m_ObjectHideFlags: 0

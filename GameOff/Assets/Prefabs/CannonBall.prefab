@@ -132,6 +132,7 @@ MonoBehaviour:
   Speed: 10
   Target: {fileID: 0}
   DamageRadius: 1.29
+  _explosionParticles: {fileID: 8307106153963394406}
 --- !u!82 &6206734093906939558
 AudioSource:
   m_ObjectHideFlags: 0
@@ -245,7 +246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4054623119911474268
 Transform:
   m_ObjectHideFlags: 0
@@ -437,5 +438,10 @@ PrefabInstance:
 --- !u!4 &8212770227004756440 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010212820824, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
+  m_PrefabInstance: {fileID: 8212220456943523456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8307106153963394406 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198000012777718758, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
   m_PrefabInstance: {fileID: 8212220456943523456}
   m_PrefabAsset: {fileID: 0}

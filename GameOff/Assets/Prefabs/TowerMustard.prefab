@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 4599212576755552241}
   - component: {fileID: 4599212576755552240}
   - component: {fileID: 1334679003171130473}
+  - component: {fileID: 8315698054524655386}
   m_Layer: 6
   m_Name: Tower
   m_TagString: Untagged
@@ -158,16 +159,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfabf24767c362478b078d07469e170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 90
-  DistanceToAttack: 21
-  AttackCooldown: 5
+  Damage: 10
+  DistanceToAttack: 40
+  AttackCooldown: 0.8
   AttackSpeed: 0
   _transform: {fileID: 0}
   audioSource: {fileID: 0}
-  Bullet: {fileID: 2442991428636851225, guid: a5b7f1701bbff47419f5d176a0b86cd2, type: 3}
+  Bullet: {fileID: 2442991428636851225, guid: 8d7d579335babab4a8ec97a2c77d95cc, type: 3}
   Target: {fileID: 0}
-  BulletSpeed: 12
-  RotationSpeed: 10
+  BulletSpeed: 30
+  RotationSpeed: 20
   Cost: 15
   ShotSFX: {fileID: 8300000, guid: 1403ef1e15a6ccb4790581df5bb1020f, type: 3}
 --- !u!82 &1334679003171130473
@@ -266,6 +267,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!208 &8315698054524655386
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4599212576755552254}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.95, y: 1.675, z: 0.855}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.76, z: -0.32}
+  m_TimeToStationary: 0.5
 --- !u!1 &4599212576971650290
 GameObject:
   m_ObjectHideFlags: 0

@@ -81,6 +81,7 @@ public class SpawnManager : MonoBehaviour
         if (!waves[currentWave].hasBeenSent && currentTime >= waves[currentWave].delay)
         {
             MusicManager.instance.PlayBattleTheme();
+            BuildManager.instance.HideBuildSlots();
             waves[currentWave].Spawn(_spawnPoints, this);
             waves[currentWave].hasBeenSent = true;
             isPlaying = true;
@@ -102,6 +103,7 @@ public class SpawnManager : MonoBehaviour
         currentTime = 0;
         enemiesLeft = waves[currentWave].enemies.ToList().Sum(x => x.count);
         MusicManager.instance.PlayWaitForBattleTheme();
+        BuildManager.instance.ShowBuildSlots();
 
     }
 

@@ -60,7 +60,7 @@ public class UIManager : MonoBehaviour
             _smallText.text = "UNTIL WAVE " + (_spawnManager.currentWave + 1);
             _bigText.text = (_spawnManager.waves[_spawnManager.currentWave].delay - (Time.deltaTime + _spawnManager.currentTime)).ToString("0:00");
             float seconds = float.Parse((_spawnManager.waves[_spawnManager.currentWave].delay - (Time.deltaTime + _spawnManager.currentTime)).ToString("0"));
-            Debug.Log(seconds);
+
             if (seconds == 5f && !MusicManager.instance.ClockTickAudioSource.isPlaying)
             {
                 MusicManager.instance.PlayClockTicks();

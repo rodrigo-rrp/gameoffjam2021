@@ -32,6 +32,13 @@ public class BuildManager : MonoBehaviour
             GameObject current = Instantiate(go, transform.position, transform.rotation);
             // current.GetComponentInChildren<Tower>().enabled = false;
             SetLayerRecursively(current, LayerMask.NameToLayer("Ignore Raycast"));
+
+            Renderer[] renderers = current.GetComponentsInChildren<Renderer>();
+            foreach (Renderer renderer in renderers)
+            {
+                renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            }
+
             current.SetActive(false);
             _instances.Add(current);
         }
@@ -128,7 +135,12 @@ public class BuildManager : MonoBehaviour
     {
         if (GameManager.instance.Buy(_instances[buttonIndex].GetComponentInChildren<Tower>().Cost))
         {
-            Instantiate(BuildableObjects[buttonIndex], _currentBuildSlot.transform.position, _currentBuildSlot.transform.rotation);
+            RaycastHit hit;
+            bool hitted = Physics.Raycast(_currentBuildSlot.transform.position, Vector3.down, out hit, Mathf.Infinity);
+
+            if (!hitted) return;
+
+            Instantiate(BuildableObjects[buttonIndex], hit.point, _currentBuildSlot.transform.rotation);
             _currentBuildSlot.SetActive(false);
             _instances[_currentPlaceholderIndex].SetActive(false);
             IsBuilding = false;
@@ -162,6 +174,24 @@ public class BuildManager : MonoBehaviour
         foreach (Transform child in obj.transform)
         {
             SetLayerRecursively(child.gameObject, layer);
+        }
+    }
+
+    public void HideBuildSlots()
+    {
+        foreach (GameObject go in _buildSlots)
+        {
+            go.SetActive(false);
+        }
+    }
+
+    public void ShowBuildSlots()
+    {
+        if (_buildSlots == null) return;
+
+        foreach (GameObject go in _buildSlots)
+        {
+            go.SetActive(true);
         }
     }
 
